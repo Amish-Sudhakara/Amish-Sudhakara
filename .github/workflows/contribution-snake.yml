@@ -1,4 +1,4 @@
-name: Generate contribution snake
+name: Update profile activity
 
 on:
   schedule:
@@ -12,12 +12,42 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: profile-activity
+  cancel-in-progress: true
+
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
+      - name: Check out the profile repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate local GitHub statistic cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: python scripts/generate_profile_cards.py
+
+      - name: Commit refreshed statistic cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-stats.svg assets/top-languages.svg
+          if git diff --cached --quiet; then
+            echo "Statistic cards are already current."
+          else
+            git commit -m "chore: refresh profile cards [skip ci]"
+            git push
+          fi
+
       - name: Generate the Signal Flare contribution snake
         uses: Platane/snk/svg-only@v3
         with:
