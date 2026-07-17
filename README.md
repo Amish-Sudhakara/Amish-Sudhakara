@@ -1,68 +1,47 @@
-<!--
-IRIDESCENT OBSIDIAN · GLASS EDITION
-Before pushing, replace YOUR_RESUME_URL below with the final public resume URL.
-GitHub username used throughout: Amish-Sudhakara
--->
-
 <div align="center">
 
-<img src="./assets/header.svg" width="100%" alt="Amish Sudhakara profile header" />
+<img src="./assets/header.svg" width="100%" alt="Amish Sudhakara — Information Science and Engineering student" />
 
-<br>
+<img src="./assets/section-divider.svg" width="100%" alt="Section divider" />
 
 <img src="./assets/about-panel.svg" width="100%" alt="About Amish Sudhakara" />
 
-<img src="./assets/section-divider.svg" width="100%" alt="" />
+<img src="./assets/section-divider.svg" width="100%" alt="Section divider" />
 
 <img src="./assets/skills-panel.svg" width="100%" alt="Technologies and current learning" />
 
-<img src="./assets/section-divider.svg" width="100%" alt="" />
+<img src="./assets/section-divider.svg" width="100%" alt="Section divider" />
 
-<img src="./assets/activity-header.svg" width="100%" alt="GitHub activity" />
+<!-- GITHUB ACTIVITY -->
 
-<br>
+<a href="https://github.com/Amish-Sudhakara">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=Amish-Sudhakara&amp;show_icons=true&amp;include_all_commits=true&amp;rank_icon=github&amp;custom_title=SYSTEM%20ACTIVITY&amp;bg_color=19191D&amp;title_color=FF4F00&amp;text_color=F2EBDD&amp;icon_color=D8FF3E&amp;border_color=34343A&amp;border_radius=0" alt="Amish Sudhakara's GitHub statistics" />
+</a>
+<a href="https://github.com/Amish-Sudhakara?tab=repositories">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Amish-Sudhakara&amp;layout=compact&amp;langs_count=8&amp;size_weight=0.5&amp;count_weight=0.5&amp;custom_title=PUBLIC%20REPO%20LANGUAGES&amp;bg_color=19191D&amp;title_color=FF4F00&amp;text_color=F2EBDD&amp;icon_color=D8FF3E&amp;border_color=34343A&amp;border_radius=0" alt="Languages used in Amish Sudhakara's public repositories" />
+</a>
 
-<img
-  width="49%"
-  src="https://github-readme-stats.vercel.app/api?username=Amish-Sudhakara&show_icons=true&include_all_commits=true&rank_icon=github&hide_border=false&border_radius=22&title_color=EAF5FF&text_color=D1D8E6&icon_color=74DFFF&ring_color=8A4DFF&border_color=485064&bg_color=135,080B11,171124,0A1720&custom_title=Public%20GitHub%20Stats"
-  alt="Amish Sudhakara GitHub statistics"
-/>
-<img
-  width="49%"
-  src="https://github-readme-stats.vercel.app/api/top-langs/?username=Amish-Sudhakara&layout=compact&langs_count=8&hide_border=false&border_radius=22&title_color=EAF5FF&text_color=D1D8E6&border_color=485064&bg_color=135,080B11,171124,0A1720&custom_title=Public%20Languages"
-  alt="Most used public GitHub languages"
-/>
-
-<br><br>
-
-<img
-  width="100%"
-  src="https://github-readme-activity-graph.vercel.app/graph?username=Amish-Sudhakara&bg_color=090C12&color=D1D8E6&title_color=EAF5FF&line=8A4DFF&point=D9FF8A&area_color=4B78FF&area=true&border_color=485064&radius=22&height=330&custom_title=Contribution%20Orbit"
-  alt="GitHub contribution activity graph"
-/>
+<sub><code>Language data reflects public repository code, not a skill rating.</code></sub>
 
 <br><br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Amish-Sudhakara/Amish-Sudhakara/output/orb-contribution-snake.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Amish-Sudhakara/Amish-Sudhakara/output/orb-contribution-snake.svg" />
-  <img width="100%" src="https://raw.githubusercontent.com/Amish-Sudhakara/Amish-Sudhakara/output/orb-contribution-snake.svg" alt="Animated GitHub contribution snake" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Amish-Sudhakara/Amish-Sudhakara/output/github-contribution-grid-snake.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Amish-Sudhakara/Amish-Sudhakara/output/github-contribution-grid-snake.svg" />
+  <img width="100%" alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/Amish-Sudhakara/Amish-Sudhakara/output/github-contribution-grid-snake.svg" />
 </picture>
 
-<img src="./assets/section-divider.svg" width="100%" alt="" />
+<img src="./assets/section-divider.svg" width="100%" alt="Section divider" />
 
-<img src="./assets/connect-header.svg" width="100%" alt="Connect with Amish" />
-
-<br>
 
 <a href="https://www.linkedin.com/in/amishsudhakara/">
-  <img src="./assets/contact-linkedin.svg" width="31.5%" alt="LinkedIn" />
+  <img src="https://img.shields.io/badge/LINKEDIN-19191D?style=for-the-badge&amp;logo=linkedin&amp;logoColor=F2EBDD&amp;labelColor=FF4F00" alt="LinkedIn" />
 </a>
-<a href="mailto:amishsudhakara@gmail.com">
-  <img src="./assets/contact-email.svg" width="31.5%" alt="Email" />
+<a href="mailto:amishs2006@gmail.com">
+  <img src="https://img.shields.io/badge/EMAIL-19191D?style=for-the-badge&amp;logo=gmail&amp;logoColor=0D0D0F&amp;labelColor=D8FF3E" alt="Email" />
 </a>
-<a href="YOUR_RESUME_URL">
-  <img src="./assets/contact-resume.svg" width="31.5%" alt="Resume" />
+<a href="https://amish-sudhakara.github.io/protfolio/">
+  <img src="https://img.shields.io/badge/R%C3%89SUM%C3%89-19191D?style=for-the-badge&amp;logo=readme&amp;logoColor=F2EBDD&amp;labelColor=34343A" alt="Résumé" />
 </a>
 
 <br><br>

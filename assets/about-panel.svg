@@ -1,122 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410">
-<defs>
-<linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#FF5FB2"/><stop offset=".27" stop-color="#8A4DFF"/>
-  <stop offset=".56" stop-color="#74DFFF"/><stop offset=".82" stop-color="#D9FF8A"/>
-  <stop offset="1" stop-color="#BD7857"/>
-  <animate attributeName="x1" values="0;.35;0" dur="9s" repeatCount="indefinite"/>
-  <animate attributeName="x2" values="1;.65;1" dur="9s" repeatCount="indefinite"/>
-</linearGradient>
-<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0" stop-color="#FFFFFF" stop-opacity=".16"/>
-  <stop offset=".28" stop-color="#FFFFFF" stop-opacity=".055"/>
-  <stop offset=".7" stop-color="#8A4DFF" stop-opacity=".055"/>
-  <stop offset="1" stop-color="#74DFFF" stop-opacity=".02"/>
-</linearGradient>
-<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
-  <stop offset=".47" stop-color="#FFFFFF" stop-opacity="0"/>
-  <stop offset=".5" stop-color="#FFFFFF" stop-opacity=".42"/>
-  <stop offset=".53" stop-color="#FFFFFF" stop-opacity="0"/>
-  <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
-</linearGradient>
-<radialGradient id="violetBlob"><stop stop-color="#8A4DFF" stop-opacity=".46"/><stop offset="1" stop-color="#8A4DFF" stop-opacity="0"/></radialGradient>
-<radialGradient id="cyanBlob"><stop stop-color="#74DFFF" stop-opacity=".38"/><stop offset="1" stop-color="#74DFFF" stop-opacity="0"/></radialGradient>
-<radialGradient id="pinkBlob"><stop stop-color="#FF5FB2" stop-opacity=".32"/><stop offset="1" stop-color="#FF5FB2" stop-opacity="0"/></radialGradient>
-<filter id="blur32" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="32"/></filter>
-<filter id="blur18" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
-<filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<filter id="glassNoise" x="-20%" y="-20%" width="140%" height="140%">
-  <feTurbulence baseFrequency=".85" numOctaves="2" seed="14" type="fractalNoise" result="n"/>
-  <feColorMatrix in="n" type="saturate" values="0" result="mono"/>
-  <feComponentTransfer in="mono"><feFuncA type="table" tableValues="0 .035"/></feComponentTransfer>
-</filter>
-<pattern id="microgrid" width="30" height="30" patternUnits="userSpaceOnUse">
-  <path d="M30 0H0V30" fill="none" stroke="#FFFFFF" stroke-opacity=".022"/>
-</pattern>
+<svg width="1200" height="450" viewBox="0 0 1200 450" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">About Amish Sudhakara</title>
+  <desc id="desc">Education, interests and current focus presented in a Signal Flare industrial interface.</desc>
+  <defs>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#929097" opacity="0.18"/>
+    </pattern>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .sans { font-family: Arial, Helvetica, sans-serif; }
+      .pulse { animation:pulse 1.8s ease-in-out infinite; transform-origin:center; }
+      .move { stroke-dasharray:11 10; animation:dash 10s linear infinite; }
+      .meter1 { animation:m1 4.8s ease-in-out infinite; }
+      .meter2 { animation:m2 5.6s ease-in-out infinite; }
+      .meter3 { animation:m3 4.1s ease-in-out infinite; }
+      @keyframes pulse { 0%,100%{opacity:.35;transform:scale(.85)}50%{opacity:1;transform:scale(1.12)} }
+      @keyframes dash { to{stroke-dashoffset:-220} }
+      @keyframes m1 {0%,100%{width:170px}50%{width:236px}}
+      @keyframes m2 {0%,100%{width:212px}50%{width:150px}}
+      @keyframes m3 {0%,100%{width:128px}50%{width:205px}}
+    </style>
+  </defs>
 
-  <clipPath id="panelClip"><rect x="1" y="1" width="1198" height="408" rx="30"/></clipPath>
-  <style>
-    .k{font:700 12px Arial,sans-serif;letter-spacing:3px;fill:#9AA4B7}
-    .t{font:800 35px Arial,sans-serif;letter-spacing:1.8px;fill:#EAF5FF}
-    .b{font:500 20px Arial,sans-serif;fill:#D1D8E6}
-    .lab{font:700 10px Arial,sans-serif;letter-spacing:2.2px;fill:#9AA4B7}
-    .val{font:600 16px Arial,sans-serif;fill:#EAF5FF}
-    .mini{font:600 11px Arial,sans-serif;letter-spacing:1.6px;fill:#EAF5FF}
-  </style>
-</defs>
-<rect width="1200" height="410" rx="30" fill="#06080D"/>
-<g clip-path="url(#panelClip)">
-  <rect width="1200" height="410" fill="url(#microgrid)"/>
-  <ellipse cx="190" cy="68" rx="250" ry="190" fill="url(#violetBlob)" filter="url(#blur32)">
-    <animate attributeName="cx" values="150;340;150" dur="13s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="45;125;45" dur="11s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="1020" cy="320" rx="260" ry="190" fill="url(#cyanBlob)" filter="url(#blur32)">
-    <animate attributeName="cx" values="1080;900;1080" dur="14s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="340;240;340" dur="12s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="860" cy="52" rx="160" ry="110" fill="url(#pinkBlob)" filter="url(#blur32)">
-    <animate attributeName="cx" values="820;970;820" dur="10s" repeatCount="indefinite"/>
-  </ellipse>
-  <rect x="22" y="22" width="1156" height="366" rx="26" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity=".12"/>
-  <rect x="22" y="22" width="1156" height="366" rx="26" fill="none" stroke="url(#edge)" stroke-opacity=".58" stroke-width="1.6" stroke-dasharray="220 910">
-    <animate attributeName="stroke-dashoffset" values="0;-1130" dur="11s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="-380" y="22" width="430" height="366" fill="url(#shine)" opacity=".22" transform="skewX(-17)">
-    <animate attributeName="x" values="-420;1470" dur="8.5s" repeatCount="indefinite"/>
-  </rect>
-  <rect width="1200" height="410" fill="#FFFFFF" filter="url(#glassNoise)" opacity=".8"/>
-</g>
-<rect x="1" y="1" width="1198" height="408" rx="29" fill="none" stroke="#2D3444"/>
+  <rect width="1200" height="450" fill="#0D0D0F"/>
+  <rect x="18" y="18" width="1164" height="414" fill="#19191D" stroke="#34343A" stroke-width="2"/>
+  <rect x="18" y="18" width="1164" height="414" fill="url(#dots)"/>
 
-<g transform="translate(62 53)">
-  <circle cx="8" cy="-4" r="4" fill="#D9FF8A" filter="url(#glow)"><animate attributeName="opacity" values=".3;1;.3" dur="2.2s" repeatCount="indefinite"/></circle>
-  <text x="24" class="k">ABOUT / 01</text>
-  <text y="48" class="t">A simple introduction.</text>
-  <text y="99" class="b">
-    <tspan x="0" dy="0">Hi, I’m Amish — a B.Tech Information Science and Engineering</tspan>
-    <tspan x="0" dy="31">student at NMAM Institute of Technology, Nitte.</tspan>
-    <tspan x="0" dy="48">I’m interested in artificial intelligence, programming and software</tspan>
-    <tspan x="0" dy="31">development. I learn by building, testing and improving things.</tspan>
-  </text>
-  <g transform="translate(0 263)">
-    <rect width="152" height="38" rx="19" fill="#FFFFFF" fill-opacity=".055" stroke="#8A4DFF" stroke-opacity=".48"/>
-    <text x="22" y="24" class="mini">LEARNING</text>
-    <circle cx="128" cy="19" r="4" fill="#8A4DFF"><animate attributeName="r" values="3;5;3" dur="2.5s" repeatCount="indefinite"/></circle>
-  </g>
-  <g transform="translate(164 263)">
-    <rect width="146" height="38" rx="19" fill="#FFFFFF" fill-opacity=".055" stroke="#74DFFF" stroke-opacity=".48"/>
-    <text x="22" y="24" class="mini">BUILDING</text>
-    <circle cx="122" cy="19" r="4" fill="#74DFFF"><animate attributeName="r" values="3;5;3" dur="2.8s" repeatCount="indefinite"/></circle>
-  </g>
-  <g transform="translate(322 263)">
-    <rect width="163" height="38" rx="19" fill="#FFFFFF" fill-opacity=".055" stroke="#D9FF8A" stroke-opacity=".48"/>
-    <text x="22" y="24" class="mini">IMPROVING</text>
-    <circle cx="139" cy="19" r="4" fill="#D9FF8A"><animate attributeName="r" values="3;5;3" dur="3.1s" repeatCount="indefinite"/></circle>
-  </g>
-</g>
+  <rect x="18" y="18" width="17" height="414" fill="#FF4F00"/>
+  <rect x="1165" y="18" width="17" height="414" fill="#D8FF3E"/>
 
-<g transform="translate(742 50)">
-  <rect width="406" height="310" rx="24" fill="#060910" fill-opacity=".47" stroke="#FFFFFF" stroke-opacity=".14"/>
-  <rect width="406" height="310" rx="24" fill="url(#glass)" opacity=".72"/>
-  <path d="M24 23H177" stroke="url(#edge)" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="370" cy="28" r="5" fill="#D9FF8A" filter="url(#glow)"><animate attributeName="opacity" values=".25;1;.25" dur="2.4s" repeatCount="indefinite"/></circle>
-  <g transform="translate(27 49)">
-    <text class="lab">DEGREE</text><text y="25" class="val">B.Tech · Information Science &amp; Engineering</text>
-    <line y1="47" x2="352" y2="47" stroke="#FFFFFF" stroke-opacity=".10"/>
+  <text x="62" y="65" class="mono" fill="#FF4F00" font-size="17" font-weight="800" letter-spacing="3">ABOUT / 02</text>
+  <line x1="190" y1="59" x2="1138" y2="59" stroke="#34343A" stroke-width="2" class="move"/>
+
+  <!-- left identity rail -->
+  <g transform="translate(62 93)">
+    <rect width="295" height="296" fill="#0D0D0F" stroke="#34343A" stroke-width="2"/>
+    <rect width="295" height="47" fill="#FF4F00"/>
+    <text x="20" y="30" class="mono" fill="#0D0D0F" font-size="14" font-weight="900" letter-spacing="2">IDENTITY CARD</text>
+
+    <text x="20" y="82" class="mono" fill="#929097" font-size="11" letter-spacing="1.8">NAME</text>
+    <text x="20" y="105" class="mono" fill="#F2EBDD" font-size="17" font-weight="700">AMISH SUDHAKARA</text>
+
+    <line x1="20" y1="122" x2="275" y2="122" stroke="#34343A"/>
+    <text x="20" y="148" class="mono" fill="#929097" font-size="11" letter-spacing="1.8">DEGREE</text>
+    <text x="20" y="171" class="mono" fill="#F2EBDD" font-size="14">B.TECH — INFORMATION</text>
+    <text x="20" y="192" class="mono" fill="#F2EBDD" font-size="14">SCIENCE &amp; ENGINEERING</text>
+
+    <line x1="20" y1="210" x2="275" y2="210" stroke="#34343A"/>
+    <text x="20" y="236" class="mono" fill="#929097" font-size="11" letter-spacing="1.8">INSTITUTE</text>
+    <text x="20" y="259" class="mono" fill="#F2EBDD" font-size="13">NMAM INSTITUTE OF</text>
+    <text x="20" y="279" class="mono" fill="#F2EBDD" font-size="13">TECHNOLOGY, NITTE</text>
+
+    <circle cx="262" cy="270" r="7" fill="#D8FF3E" class="pulse"/>
   </g>
-  <g transform="translate(27 111)">
-    <text class="lab">INSTITUTE</text><text y="25" class="val">NMAM Institute of Technology, Nitte</text>
-    <line y1="47" x2="352" y2="47" stroke="#FFFFFF" stroke-opacity=".10"/>
+
+  <!-- main copy -->
+  <g transform="translate(393 94)">
+    <text x="0" y="23" class="mono" fill="#D8FF3E" font-size="12" letter-spacing="2">HELLO / SYSTEM INTRODUCTION</text>
+    <text x="0" y="68" class="sans" fill="#F2EBDD" font-size="24" font-weight="700">I’m a student interested in artificial intelligence,</text>
+    <text x="0" y="101" class="sans" fill="#F2EBDD" font-size="24" font-weight="700">programming, and software development.</text>
+
+    <text x="0" y="146" class="sans" fill="#929097" font-size="17">I learn mainly by building, testing, fixing mistakes, and understanding</text>
+    <text x="0" y="173" class="sans" fill="#929097" font-size="17">how the pieces of a system work together. I’m currently strengthening</text>
+    <text x="0" y="200" class="sans" fill="#929097" font-size="17">my fundamentals while exploring practical AI and software workflows.</text>
+
+    <!-- calm focus chips -->
+    <g transform="translate(0 231)">
+      <rect width="188" height="43" fill="#0D0D0F" stroke="#FF4F00" stroke-width="2"/>
+      <text x="94" y="27" text-anchor="middle" class="mono" fill="#F2EBDD" font-size="12" letter-spacing="1.3">PROGRAMMING</text>
+
+      <rect x="202" width="102" height="43" fill="#FF4F00"/>
+      <text x="253" y="27" text-anchor="middle" class="mono" fill="#0D0D0F" font-size="12" font-weight="900" letter-spacing="1.5">AI</text>
+
+      <rect x="318" width="228" height="43" fill="#0D0D0F" stroke="#34343A" stroke-width="2"/>
+      <text x="432" y="27" text-anchor="middle" class="mono" fill="#F2EBDD" font-size="12" letter-spacing="1.1">SOFTWARE DEVELOPMENT</text>
+
+      <rect x="560" width="145" height="43" fill="#D8FF3E"/>
+      <text x="632.5" y="27" text-anchor="middle" class="mono" fill="#0D0D0F" font-size="12" font-weight="900" letter-spacing="1.2">LEARNING</text>
+    </g>
+
+    <!-- animated telemetry bars -->
+    <g transform="translate(0 295)">
+      <text x="0" y="12" class="mono" fill="#929097" font-size="10" letter-spacing="1.8">CURIOSITY</text>
+      <rect x="96" y="2" width="250" height="10" fill="#0D0D0F" stroke="#34343A"/>
+      <rect x="97" y="3" height="8" fill="#FF4F00" class="meter1"/>
+
+      <text x="370" y="12" class="mono" fill="#929097" font-size="10" letter-spacing="1.8">PRACTICE</text>
+      <rect x="449" y="2" width="250" height="10" fill="#0D0D0F" stroke="#34343A"/>
+      <rect x="450" y="3" height="8" fill="#D8FF3E" class="meter2"/>
+
+      <text x="0" y="42" class="mono" fill="#929097" font-size="10" letter-spacing="1.8">PROGRESS</text>
+      <rect x="96" y="32" width="250" height="10" fill="#0D0D0F" stroke="#34343A"/>
+      <rect x="97" y="33" height="8" fill="#F2EBDD" class="meter3"/>
+      <text x="370" y="42" class="mono" fill="#929097" font-size="10" letter-spacing="1.8">NO FAKE PERCENTAGES // JUST ACTIVE WORK</text>
+    </g>
   </g>
-  <g transform="translate(27 173)">
-    <text class="lab">CURRENT FOCUS</text><text y="25" class="val">AI · Programming · Software Development</text>
-    <line y1="47" x2="352" y2="47" stroke="#FFFFFF" stroke-opacity=".10"/>
-  </g>
-  <g transform="translate(27 235)"><text class="lab">BASE</text><text y="25" class="val">Karnataka, India</text></g>
-  <rect x="-150" y="0" width="130" height="310" fill="url(#shine)" opacity=".16" transform="skewX(-15)">
-    <animate attributeName="x" values="-180;570" dur="6.8s" repeatCount="indefinite"/>
-  </rect>
-</g>
+
+  <text x="62" y="417" class="mono" fill="#929097" font-size="10" letter-spacing="2">KARNATAKA · INDIA</text>
+  <text x="908" y="417" class="mono" fill="#929097" font-size="10" letter-spacing="2">STUDENT PROFILE / REV.01</text>
 </svg>

@@ -1,32 +1,31 @@
-name: Generate Orb Contribution Snake
+name: Generate contribution snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    # Runs once every day at 00:30 UTC.
+    - cron: "30 0 * * *"
   workflow_dispatch:
   push:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   generate:
-    permissions:
-      contents: write
-
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
     steps:
-      - name: Generate the iridescent contribution snake
+      - name: Generate the Signal Flare contribution snake
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/orb-contribution-snake.svg?palette=github-dark&color_snake=%23EAF5FF&color_dots=%23090C12,%23231839,%235B35A5,%2374DFFF,%23D9FF8A
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            dist/github-contribution-grid-snake.svg?color_snake=%23FF4F00&color_dots=%230D0D0F,%2334343A,%236D2E14,%23B6400C,%23D8FF3E
 
-      - name: Publish snake to output branch
+      - name: Publish the generated SVG to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
