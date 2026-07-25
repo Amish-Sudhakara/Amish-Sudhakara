@@ -1,12 +1,14 @@
 name: Generate 3D Contribution Calendar
 
 on:
+  # runs every day at 00 : 30 UTC
   schedule:
     - cron: "30 0 * * *"
+  # allow manual trigger from “Actions → Run workflow”
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: write   # needed for the auto-commit step
 
 jobs:
   build:
@@ -14,119 +16,73 @@ jobs:
     name: Generate Signal Flare 3D Contributions
 
     steps:
-      - name: Checkout repository
+      - name: 📥 Checkout repository
         uses: actions/checkout@v5
 
-      - name: Generate 3D contribution calendar
+      - name: 🛠️ Generate calendar SVG
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-          SETTING_JSON: conf/github-profile-3d-contrib.json
+          USERNAME:       ${{ github.repository_owner }}
+          SETTING_JSON:   conf/github-profile-3d-contrib.json
 
-      - name: Post-process generated SVG
+      - name: 🧹 Post-process SVG (hide stars/forks, stretch cubes)
         run: |
           python <<'PY'
-          from pathlib import Path
           import re
           import xml.etree.ElementTree as ET
-
-          svg_path = Path("profile-3d-contrib/profile-signal-flare.svg")
-          if not svg_path.exists():
-              raise SystemExit("profile-signal-flare.svg was not generated.")
+          from pathlib import Path
 
           SVG_NS = "http://www.w3.org/2000/svg"
-          XLINK_NS = "http://www.w3.org/1999/xlink"
           ET.register_namespace("", SVG_NS)
-          ET.register_namespace("xlink", XLINK_NS)
 
-          tree = ET.parse(svg_path)
+          svg_file = Path("profile-3d-contrib/profile-signal-flare.svg")
+          if not svg_file.exists():
+              raise SystemExit("❌  SVG not generated – aborting post-process")
+
+          tree = ET.parse(svg_file)
           root = tree.getroot()
 
-          def num(val, default=0.0):
-              if not val:
-                  return default
-              m = re.search(r"[-+]?[0-9]*\.?[0-9]+", str(val))
-              return float(m.group()) if m else default
+          # ------------------------------------------------------------
+          # Helper: build parent map so we can delete nodes cleanly
+          parent_map = {c: p for p in root.iter() for c in p}
 
-          viewbox = root.get("viewBox")
-          if viewbox:
-              parts = viewbox.strip().split()
-              if len(parts) == 4:
-                  _, _, W, H = map(float, parts)
-              else:
-                  W, H = 1280.0, 720.0
-          else:
-              W = num(root.get("width"), 1280.0)
-              H = num(root.get("height"), 720.0)
+          # ------------------------------------------------------------
+          # 1. Remove stars / forks footer completely
+          for elem in list(root.iter()):
+              txt = (elem.get("id", "") + elem.get("class", "")).lower()
+              if any(key in txt for key in ("star", "fork")):
+                  parent = parent_map.get(elem)
+                  if parent is not None:
+                      parent.remove(elem)
 
-          # Build parent map
-          parent_map = {}
-          for parent in root.iter():
-              for child in list(parent):
-                  parent_map[child] = parent
+          # ------------------------------------------------------------
+          # 2. Exaggerate cube height (scaleY = 2.5)
+          scale_y = 2.5
+          # calendar grid usually sits ~58 % down the canvas – we find bbox
+          # fallback if <g id="contrib" …> exists, otherwise rough estimate
+          contrib_groups = [g for g in root.iter() if "contrib" in (g.get("id","")+g.get("class","")).lower()]
+          targets = contrib_groups or [root]  # fallback to whole root
+          for g in targets:
+              current = g.get("transform", "")
+              # translate so scaling happens around the bottom of the cubes
+              transform = f"{current} translate(0, -50) scale(1 {scale_y}) translate(0, 50)"
+              g.set("transform", transform.strip())
 
-          def meta(elem):
-              return " ".join([
-                  elem.get("id", ""),
-                  elem.get("class", ""),
-              ]).lower()
-
-          # 1) Remove elements whose id/class mentions star/fork
-          remove_candidates = []
-          for elem in root.iter():
-              m = meta(elem)
-              if "star" in m or "fork" in m:
-                  remove_candidates.append(elem)
-
-          for elem in remove_candidates:
-              parent = parent_map.get(elem)
-              if parent is not None and elem in list(parent):
-                  parent.remove(elem)
-
-          # 2) Fallback mask to hide remaining star/fork counters
-          #    This keeps the contributions count on the left.
-          mask_rect = ET.Element(f"{{{SVG_NS}}}rect", {
-              "x": str(W * 0.56),
-              "y": str(H * 0.90),
-              "width": str(W * 0.24),
-              "height": str(H * 0.09),
-              "fill": "#0D0D0F"
-          })
-          root.append(mask_rect)
-
-          # 3) Try to make contribution blocks look taller
-          #    Applies only to likely calendar/contribution groups.
-          scale_y = 1.35
-          origin_y = H * 0.58
-          translate_y = origin_y * (1 - scale_y)
-
-          applied = False
-          for elem in root.iter():
-              m = meta(elem)
-              if any(key in m for key in ["calendar", "contrib", "contribution", "3d", "grid"]):
-                  if any(skip in m for skip in ["radar", "pie", "legend", "lang", "stats"]):
-                      continue
-                  current = elem.get("transform", "")
-                  extra = f" translate(0 {translate_y:.2f}) scale(1 {scale_y})"
-                  elem.set("transform", (current + extra).strip())
-                  applied = True
-
-          tree.write(svg_path, encoding="utf-8", xml_declaration=True)
-          print("Post-processing complete.")
-          print(f"Height exaggeration applied: {applied}")
+          tree.write(svg_file, encoding="UTF-8", xml_declaration=True)
+          print("✅  Post-processing completed")
           PY
 
-      - name: Commit generated calendar
+      - name: 💾 Commit updated calendar (if it changed)
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add profile-3d-contrib/
 
           if git diff --cached --quiet; then
-            echo "No contribution calendar changes."
+            echo "ℹ️  No changes – nothing to commit"
           else
-            git commit -m "Update 3D contribution calendar"
+            git commit -m "Update 3D contribution calendar (taller cubes, no stars/forks)"
             git push
           fi
