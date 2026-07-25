@@ -32,13 +32,11 @@ jobs:
           from html import escape
           from pathlib import Path
 
-
           TOKEN = os.environ["GH_TOKEN"]
           USERNAME = os.environ["GH_USERNAME"]
 
           TODAY = date.today()
           FROM_DATE = TODAY - timedelta(days=364)
-
 
           # ------------------------------------------------------------
           # GitHub helpers
@@ -106,7 +104,6 @@ jobs:
               except Exception:
                   return fallback
 
-
           # ------------------------------------------------------------
           # Fetch contribution calendar
           # ------------------------------------------------------------
@@ -155,9 +152,8 @@ jobs:
               default=1,
           )
 
-
           # ------------------------------------------------------------
-          # Fetch repo / language / stars / forks data
+          # Fetch repo / language / activity data
           # ------------------------------------------------------------
 
           repos = gh_rest_paged(
@@ -166,34 +162,31 @@ jobs:
 
           owned_repos = [r for r in repos if not r.get("fork", False)]
           repo_count = len(owned_repos)
-          total_stars = sum(int(r.get("stargazers_count", 0)) for r in owned_repos)
-          total_forks = sum(int(r.get("forks_count", 0)) for r in owned_repos)
 
           language_weights = {}
           for repo in owned_repos:
-              lang = repo.get("language") or "Other"
+              raw_lang = repo.get("language")
+              lang = raw_lang.strip() if isinstance(raw_lang, str) and raw_lang.strip() else "Other"
               weight = max(int(repo.get("size", 0)), 1)
               language_weights[lang] = language_weights.get(lang, 0) + weight
 
-          top_languages = sorted(
+          # sort languages
+          sorted_langs = sorted(
               language_weights.items(),
               key=lambda x: x[1],
               reverse=True,
           )
 
-          main_langs = top_languages[:3]
-          other_weight = sum(w for _, w in top_languages[3:])
+          # take top 3 non-"Other" languages, then merge rest into one Other bucket
+          explicit_langs = [(n, w) for n, w in sorted_langs if n.lower() != "other"]
+          top_langs = explicit_langs[:3]
 
-          lang_data = []
-          for name, weight in main_langs:
-              lang_data.append((name, weight))
-          if other_weight > 0 or not lang_data:
-              lang_data.append(("other", other_weight if other_weight > 0 else 1))
+          other_weight = sum(w for n, w in sorted_langs if n.lower() == "other")
+          other_weight += sum(w for _, w in explicit_langs[3:])
 
-
-          # ------------------------------------------------------------
-          # Fetch activity metrics for radar chart
-          # ------------------------------------------------------------
+          lang_data = list(top_langs)
+          if other_weight > 0:
+              lang_data.append(("Other", other_weight))
 
           since_str = FROM_DATE.isoformat()
 
@@ -219,16 +212,13 @@ jobs:
               ("Repo", repo_count),
           ]
 
-
           # ------------------------------------------------------------
           # Theme
           # ------------------------------------------------------------
 
           BG = "#0D0D0F"
-          BG_PANEL = "#111114"
-          GRID_EMPTY_TOP = "#19191D"
-
           EMPTY_TOP = "#18191E"
+          EMPTY_TILE_STROKE = "#242833"
 
           CONTRIBUTION_COLORS = [
               ("#4A2415", "#2D160D", "#381B10"),
@@ -246,7 +236,6 @@ jobs:
           NOTEBOOK = "#F37726"
           HTML = "#E34F26"
           OTHER = "#4A4A4A"
-
 
           def lang_color(name: str):
               key = name.lower()
@@ -271,7 +260,6 @@ jobs:
               idx = abs(hash(name)) % len(fallback_palette)
               return fallback_palette[idx]
 
-
           # ------------------------------------------------------------
           # Layout
           # ------------------------------------------------------------
@@ -284,7 +272,6 @@ jobs:
 
           ORIGIN_X = 112
           ORIGIN_Y = 62
-
 
           # ------------------------------------------------------------
           # Geometry helpers
@@ -338,7 +325,6 @@ jobs:
           def fmt_num(n: int) -> str:
               return f"{n:,}"
 
-
           # ------------------------------------------------------------
           # Build calendar cells
           # ------------------------------------------------------------
@@ -362,7 +348,6 @@ jobs:
                   )
 
           cells.sort(key=lambda item: (item[0], item[1], item[2]))
-
 
           # ------------------------------------------------------------
           # Start SVG
@@ -391,7 +376,6 @@ jobs:
               '''
           )
 
-
           # ------------------------------------------------------------
           # Calendar
           # ------------------------------------------------------------
@@ -411,7 +395,7 @@ jobs:
 
               if level == 0:
                   svg.append(
-                      f'<polygon points="{points_str(bottom)}" fill="{EMPTY_TOP}" opacity="0.95"/>'
+                      f'<polygon points="{points_str(bottom)}" fill="{EMPTY_TOP}" stroke="{EMPTY_TILE_STROKE}" stroke-width="0.8" opacity="0.98"/>'
                   )
                   continue
 
@@ -425,11 +409,10 @@ jobs:
               svg.append(f"<title>{escape(contribution_date)}: {count} contributions</title>")
               svg.append(f'<polygon points="{points_str(left_side)}" fill="{left_color}"/>')
               svg.append(f'<polygon points="{points_str(right_side)}" fill="{right_color}"/>')
-              svg.append(f'<polygon points="{points_str(top)}" fill="{top_color}"/>')
+              svg.append(f'<polygon points="{points_str(top)}" fill="{top_color}" stroke="{EMPTY_TILE_STROKE}" stroke-width="0.8"/>')
               svg.append("</g>")
 
           svg.append("</g>")
-
 
           # ------------------------------------------------------------
           # Radar chart
@@ -489,7 +472,6 @@ jobs:
 
           svg.append("</g>")
 
-
           # ------------------------------------------------------------
           # Donut chart + legend
           # ------------------------------------------------------------
@@ -512,31 +494,27 @@ jobs:
               svg.append(f'<path d="{path}" fill="{color}"/>')
               start_angle = end_angle
 
-          # donut hole
           svg.append(f'<circle cx="{donut_cx}" cy="{donut_cy}" r="{r_inner-1}" fill="{BG}"/>')
 
-          legend_x = 295
+          legend_x = 265
           legend_y = 505
           legend_gap = 42
 
           for i, (name, _) in enumerate(lang_data):
-              label = name if name != "other" else "other"
               color = lang_color(name)
               y = legend_y + (i * legend_gap)
 
               svg.append(f'<rect x="{legend_x}" y="{y-14}" width="20" height="20" fill="{color}"/>')
               svg.append(
-                  f'<text x="{legend_x + 28}" y="{y+2}" fill="{TEXT}" font-family="Arial, sans-serif" font-size="22">{escape(label)}</text>'
+                  f'<text x="{legend_x + 28}" y="{y+2}" fill="{TEXT}" font-family="Arial, sans-serif" font-size="22">{escape(name)}</text>'
               )
 
           svg.append("</g>")
-
 
           # ------------------------------------------------------------
           # Footer summary
           # ------------------------------------------------------------
 
-          # bottom accent line
           svg.append(
               f'''
               <path d="M 0 {HEIGHT-10} L 0 {HEIGHT-4} L {WIDTH} {HEIGHT-4} L {WIDTH} {HEIGHT-10}"
@@ -548,46 +526,45 @@ jobs:
 
           # contributions
           svg.append(
-              f'<text x="330" y="{footer_y}" fill="{ORANGE}" font-family="Arial, sans-serif" font-size="26" font-weight="700">{fmt_num(total_contributions)}</text>'
+              f'<text x="310" y="{footer_y}" fill="{ORANGE}" font-family="Arial, sans-serif" font-size="26" font-weight="700">{fmt_num(total_contributions)}</text>'
           )
           svg.append(
-              f'<text x="386" y="{footer_y}" fill="{TEXT}" font-family="Arial, sans-serif" font-size="22">contributions</text>'
-          )
-
-          # star icon
-          star_x = 605
-          star_y = footer_y - 8
-          star_points = []
-          outer_r = 12
-          inner_r = 5.2
-          for i in range(10):
-              ang = -90 + i * 36
-              r = outer_r if i % 2 == 0 else inner_r
-              px = star_x + r * math.cos(math.radians(ang))
-              py = star_y + r * math.sin(math.radians(ang))
-              star_points.append((px, py))
-          svg.append(
-              f'<polygon points="{points_str(star_points)}" fill="none" stroke="{TEXT}" stroke-width="2"/>'
-          )
-          svg.append(
-              f'<text x="626" y="{footer_y}" fill="{TEXT}" font-family="Arial, sans-serif" font-size="22" font-weight="700">{fmt_num(total_stars)}</text>'
+              f'<text x="365" y="{footer_y}" fill="{TEXT}" font-family="Arial, sans-serif" font-size="22">contributions</text>'
           )
 
-          # fork icon
-          fx = 720
-          fy = footer_y - 8
-          svg.append(f'<circle cx="{fx}" cy="{fy-10}" r="4" fill="{TEXT}"/>')
-          svg.append(f'<circle cx="{fx-10}" cy="{fy+8}" r="4" fill="{TEXT}"/>')
-          svg.append(f'<circle cx="{fx+10}" cy="{fy+8}" r="4" fill="{TEXT}"/>')
-          svg.append(f'<line x1="{fx}" y1="{fy-6}" x2="{fx}" y2="{fy+2}" stroke="{TEXT}" stroke-width="2"/>')
-          svg.append(f'<line x1="{fx}" y1="{fy+1}" x2="{fx-10}" y2="{fy+6}" stroke="{TEXT}" stroke-width="2"/>')
-          svg.append(f'<line x1="{fx}" y1="{fy+1}" x2="{fx+10}" y2="{fy+6}" stroke="{TEXT}" stroke-width="2"/>')
+          # repo icon and count
+          repo_x = 600
+          repo_y = footer_y - 18
           svg.append(
-              f'<text x="740" y="{footer_y}" fill="{TEXT}" font-family="Arial, sans-serif" font-size="22" font-weight="700">{fmt_num(total_forks)}</text>'
+              f'<rect x="{repo_x}" y="{repo_y}" width="20" height="16" rx="2" fill="none" stroke="{TEXT}" stroke-width="2"/>'
+          )
+          svg.append(
+              f'<path d="M {repo_x+6} {repo_y} L {repo_x+10} {repo_y-6} L {repo_x+20} {repo_y-6} L {repo_x+20} {repo_y}" fill="none" stroke="{TEXT}" stroke-width="2"/>'
+          )
+          svg.append(
+              f'<text x="{repo_x + 30}" y="{footer_y}" fill="{TEXT}" font-family="Arial, sans-serif" font-size="22" font-weight="700">{fmt_num(repo_count)}</text>'
+          )
+          svg.append(
+              f'<text x="{repo_x + 52}" y="{footer_y}" fill="{TEXT}" font-family="Arial, sans-serif" font-size="22">repos</text>'
+          )
+
+          # pull request icon and count
+          pr_x = 760
+          pr_y = footer_y - 8
+          svg.append(f'<circle cx="{pr_x}" cy="{pr_y-10}" r="4" fill="{TEXT}"/>')
+          svg.append(f'<circle cx="{pr_x-10}" cy="{pr_y+8}" r="4" fill="{TEXT}"/>')
+          svg.append(f'<circle cx="{pr_x+10}" cy="{pr_y+8}" r="4" fill="{TEXT}"/>')
+          svg.append(f'<line x1="{pr_x}" y1="{pr_y-6}" x2="{pr_x}" y2="{pr_y+2}" stroke="{TEXT}" stroke-width="2"/>')
+          svg.append(f'<line x1="{pr_x}" y1="{pr_y+1}" x2="{pr_x-10}" y2="{pr_y+6}" stroke="{TEXT}" stroke-width="2"/>')
+          svg.append(f'<line x1="{pr_x}" y1="{pr_y+1}" x2="{pr_x+10}" y2="{pr_y+6}" stroke="{TEXT}" stroke-width="2"/>')
+          svg.append(
+              f'<text x="{pr_x + 22}" y="{footer_y}" fill="{TEXT}" font-family="Arial, sans-serif" font-size="22" font-weight="700">{fmt_num(pr_count)}</text>'
+          )
+          svg.append(
+              f'<text x="{pr_x + 46}" y="{footer_y}" fill="{TEXT}" font-family="Arial, sans-serif" font-size="22">PRs</text>'
           )
 
           svg.append("</svg>")
-
 
           # ------------------------------------------------------------
           # Save
@@ -599,7 +576,7 @@ jobs:
 
           print(f"Generated {output_file}")
           print(f"Total contributions: {total_contributions}")
-          print(f"Repo count: {repo_count}, Stars: {total_stars}, Forks: {total_forks}")
+          print(f"Repo count: {repo_count}, PR count: {pr_count}")
           PY
 
       - name: Commit generated calendar
