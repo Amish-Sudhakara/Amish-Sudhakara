@@ -1,14 +1,14 @@
 name: Generate 3D Contribution Calendar
 
 on:
-  # runs every day at 00 : 30 UTC
   schedule:
+    # Runs every day at 00:30 UTC
     - cron: "30 0 * * *"
-  # allow manual trigger from “Actions → Run workflow”
+
   workflow_dispatch:
 
 permissions:
-  contents: write   # needed for the auto-commit step
+  contents: write
 
 jobs:
   build:
@@ -16,73 +16,523 @@ jobs:
     name: Generate Signal Flare 3D Contributions
 
     steps:
-      - name: 📥 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v5
 
-      - name: 🛠️ Generate calendar SVG
-        uses: yoshi389111/github-profile-3d-contrib@latest
+      - name: Generate calendar-only SVG
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME:       ${{ github.repository_owner }}
-          SETTING_JSON:   conf/github-profile-3d-contrib.json
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: ${{ github.repository_owner }}
 
-      - name: 🧹 Post-process SVG (hide stars/forks, stretch cubes)
         run: |
           python <<'PY'
-          import re
-          import xml.etree.ElementTree as ET
+          import json
+          import math
+          import os
+          import urllib.request
+
+          from datetime import date, timedelta
+          from html import escape
           from pathlib import Path
 
-          SVG_NS = "http://www.w3.org/2000/svg"
-          ET.register_namespace("", SVG_NS)
 
-          svg_file = Path("profile-3d-contrib/profile-signal-flare.svg")
-          if not svg_file.exists():
-              raise SystemExit("❌  SVG not generated – aborting post-process")
+          token = os.environ["GH_TOKEN"]
+          username = os.environ["GH_USERNAME"]
 
-          tree = ET.parse(svg_file)
-          root = tree.getroot()
+          today = date.today()
+          from_date = today - timedelta(days=364)
 
-          # ------------------------------------------------------------
-          # Helper: build parent map so we can delete nodes cleanly
-          parent_map = {c: p for p in root.iter() for c in p}
 
-          # ------------------------------------------------------------
-          # 1. Remove stars / forks footer completely
-          for elem in list(root.iter()):
-              txt = (elem.get("id", "") + elem.get("class", "")).lower()
-              if any(key in txt for key in ("star", "fork")):
-                  parent = parent_map.get(elem)
-                  if parent is not None:
-                      parent.remove(elem)
+          # Fetch only contribution-calendar data from GitHub.
+          query = """
+          query($login: String!, $from: DateTime!, $to: DateTime!) {
+            user(login: $login) {
+              contributionsCollection(from: $from, to: $to) {
+                contributionCalendar {
+                  weeks {
+                    contributionDays {
+                      contributionCount
+                      date
+                      weekday
+                    }
+                  }
+                }
+              }
+            }
+          }
+          """
 
-          # ------------------------------------------------------------
-          # 2. Exaggerate cube height (scaleY = 2.5)
-          scale_y = 2.5
-          # calendar grid usually sits ~58 % down the canvas – we find bbox
-          # fallback if <g id="contrib" …> exists, otherwise rough estimate
-          contrib_groups = [g for g in root.iter() if "contrib" in (g.get("id","")+g.get("class","")).lower()]
-          targets = contrib_groups or [root]  # fallback to whole root
-          for g in targets:
-              current = g.get("transform", "")
-              # translate so scaling happens around the bottom of the cubes
-              transform = f"{current} translate(0, -50) scale(1 {scale_y}) translate(0, 50)"
-              g.set("transform", transform.strip())
 
-          tree.write(svg_file, encoding="UTF-8", xml_declaration=True)
-          print("✅  Post-processing completed")
+          payload = json.dumps(
+              {
+                  "query": query,
+                  "variables": {
+                      "login": username,
+                      "from": f"{from_date.isoformat()}T00:00:00Z",
+                      "to": f"{today.isoformat()}T23:59:59Z",
+                  },
+              }
+          ).encode("utf-8")
+
+
+          request = urllib.request.Request(
+              "https://api.github.com/graphql",
+              data=payload,
+              headers={
+                  "Authorization": f"Bearer {token}",
+                  "Content-Type": "application/json",
+                  "User-Agent": "signal-flare-3d-calendar",
+              },
+              method="POST",
+          )
+
+
+          with urllib.request.urlopen(request, timeout=60) as response:
+              result = json.load(response)
+
+
+          if result.get("errors"):
+              raise RuntimeError(
+                  json.dumps(result["errors"], indent=2)
+              )
+
+
+          user = result.get("data", {}).get("user")
+
+          if not user:
+              raise RuntimeError(
+                  f"GitHub user '{username}' was not found."
+              )
+
+
+          weeks = (
+              user["contributionsCollection"]
+              ["contributionCalendar"]
+              ["weeks"]
+          )
+
+
+          days = [
+              day
+              for week in weeks
+              for day in week["contributionDays"]
+          ]
+
+
+          max_count = max(
+              (
+                  day["contributionCount"]
+                  for day in days
+              ),
+              default=1,
+          )
+
+
+          # ---------------------------------------------------------
+          # SVG canvas
+          # ---------------------------------------------------------
+
+          width = 1500
+          height = 690
+
+          # Size of each isometric tile
+          tile_width = 30
+          tile_height = 16
+
+          # Starting point of the calendar
+          origin_x = 235
+          origin_y = 45
+
+
+          # ---------------------------------------------------------
+          # Signal Flare theme
+          # ---------------------------------------------------------
+
+          background_color = "#0D0D0F"
+
+          empty_top = "#19191D"
+          empty_left = "#111115"
+          empty_right = "#151519"
+
+
+          # top, left side, right side
+          contribution_palette = [
+              (
+                  "#4A2415",
+                  "#2D160D",
+                  "#381B10",
+              ),
+              (
+                  "#873514",
+                  "#51200C",
+                  "#67280F",
+              ),
+              (
+                  "#FF4F00",
+                  "#982F00",
+                  "#C23C00",
+              ),
+              (
+                  "#D8FF3E",
+                  "#819925",
+                  "#A4C22F",
+              ),
+          ]
+
+
+          # ---------------------------------------------------------
+          # Contribution calculations
+          # ---------------------------------------------------------
+
+          def contribution_level(count: int) -> int:
+              """
+              Select the block colour based on the contribution count.
+              """
+
+              if count <= 0:
+                  return 0
+
+
+              ratio = (
+                  math.log1p(count)
+                  / math.log1p(max_count)
+              )
+
+
+              if ratio < 0.28:
+                  return 1
+
+              if ratio < 0.52:
+                  return 2
+
+              if ratio < 0.76:
+                  return 3
+
+              return 4
+
+
+          def block_height(count: int) -> float:
+              """
+              Calculate a continuous block height.
+
+              This avoids the earlier problem where nearly every
+              contribution block had the same height.
+              """
+
+              if count <= 0:
+                  return 2.0
+
+
+              ratio = (
+                  math.log1p(count)
+                  / math.log1p(max_count)
+              )
+
+
+              # Active blocks range from roughly 22px to 125px.
+              # Higher contribution days become clearly taller.
+              return 22.0 + ((ratio ** 1.25) * 103.0)
+
+
+          def iso_position(
+              week_index: int,
+              weekday: int,
+          ):
+              """
+              Convert calendar coordinates into isometric coordinates.
+              """
+
+              x = (
+                  origin_x
+                  + (week_index - weekday)
+                  * (tile_width / 2)
+              )
+
+
+              y = (
+                  origin_y
+                  + (week_index + weekday)
+                  * (tile_height / 2)
+              )
+
+
+              return x, y
+
+
+          def polygon_points(values):
+              return " ".join(
+                  f"{x:.1f},{y:.1f}"
+                  for x, y in values
+              )
+
+
+          # ---------------------------------------------------------
+          # Prepare cells
+          # ---------------------------------------------------------
+
+          cells = []
+
+
+          for week_index, week in enumerate(weeks):
+              for day in week["contributionDays"]:
+
+                  weekday = int(day["weekday"])
+                  count = int(day["contributionCount"])
+
+                  x, y = iso_position(
+                      week_index,
+                      weekday,
+                  )
+
+
+                  cells.append(
+                      (
+                          week_index + weekday,
+                          week_index,
+                          weekday,
+                          x,
+                          y,
+                          count,
+                          day["date"],
+                      )
+                  )
+
+
+          # Draw back-to-front for correct 3D overlap.
+          cells.sort(
+              key=lambda item: (
+                  item[0],
+                  item[1],
+                  item[2],
+              )
+          )
+
+
+          # ---------------------------------------------------------
+          # Create SVG
+          # ---------------------------------------------------------
+
+          svg = []
+
+
+          svg.append(
+              '<?xml version="1.0" encoding="UTF-8"?>'
+          )
+
+
+          svg.append(
+              f'<svg '
+              f'xmlns="http://www.w3.org/2000/svg" '
+              f'width="{width}" '
+              f'height="{height}" '
+              f'viewBox="0 0 {width} {height}" '
+              f'role="img" '
+              f'aria-label="{escape(username)} '
+              f'3D GitHub contribution calendar">'
+          )
+
+
+          svg.append(
+              f'<rect '
+              f'width="100%" '
+              f'height="100%" '
+              f'fill="{background_color}"/>'
+          )
+
+
+          # Only a soft shadow is used.
+          # No radar chart, language chart, stars, forks or counters.
+          svg.append(
+              """
+              <defs>
+                <filter
+                  id="shadow"
+                  x="-30%"
+                  y="-30%"
+                  width="160%"
+                  height="190%"
+                >
+                  <feDropShadow
+                    dx="0"
+                    dy="5"
+                    stdDeviation="4"
+                    flood-color="#000000"
+                    flood-opacity="0.48"
+                  />
+                </filter>
+              </defs>
+              """
+          )
+
+
+          svg.append(
+              '<g filter="url(#shadow)">'
+          )
+
+
+          for (
+              _,
+              _,
+              _,
+              x,
+              y,
+              count,
+              contribution_date,
+          ) in cells:
+
+              level = contribution_level(count)
+              cube_height = block_height(count)
+
+
+              if level == 0:
+                  top_color = empty_top
+                  left_color = empty_left
+                  right_color = empty_right
+
+              else:
+                  (
+                      top_color,
+                      left_color,
+                      right_color,
+                  ) = contribution_palette[level - 1]
+
+
+              # Bottom diamond
+              bottom = [
+                  (
+                      x,
+                      y,
+                  ),
+                  (
+                      x + tile_width / 2,
+                      y + tile_height / 2,
+                  ),
+                  (
+                      x,
+                      y + tile_height,
+                  ),
+                  (
+                      x - tile_width / 2,
+                      y + tile_height / 2,
+                  ),
+              ]
+
+
+              # Move the top face upward according to contribution count.
+              top = [
+                  (
+                      point_x,
+                      point_y - cube_height,
+                  )
+                  for point_x, point_y in bottom
+              ]
+
+
+              left_side = [
+                  top[3],
+                  top[2],
+                  bottom[2],
+                  bottom[3],
+              ]
+
+
+              right_side = [
+                  top[1],
+                  top[2],
+                  bottom[2],
+                  bottom[1],
+              ]
+
+
+              svg.append("<g>")
+
+
+              # Hovering over a block shows date and contribution count.
+              svg.append(
+                  f"<title>"
+                  f"{escape(contribution_date)}: "
+                  f"{count} contributions"
+                  f"</title>"
+              )
+
+
+              svg.append(
+                  f'<polygon '
+                  f'points="{polygon_points(left_side)}" '
+                  f'fill="{left_color}" '
+                  f'stroke="#0A0A0C" '
+                  f'stroke-width="0.8"/>'
+              )
+
+
+              svg.append(
+                  f'<polygon '
+                  f'points="{polygon_points(right_side)}" '
+                  f'fill="{right_color}" '
+                  f'stroke="#0A0A0C" '
+                  f'stroke-width="0.8"/>'
+              )
+
+
+              svg.append(
+                  f'<polygon '
+                  f'points="{polygon_points(top)}" '
+                  f'fill="{top_color}" '
+                  f'stroke="#0A0A0C" '
+                  f'stroke-width="0.8"/>'
+              )
+
+
+              svg.append("</g>")
+
+
+          svg.append("</g>")
+          svg.append("</svg>")
+
+
+          # ---------------------------------------------------------
+          # Save generated calendar
+          # ---------------------------------------------------------
+
+          output_file = Path(
+              "profile-3d-contrib/"
+              "profile-signal-flare.svg"
+          )
+
+
+          output_file.parent.mkdir(
+              parents=True,
+              exist_ok=True,
+          )
+
+
+          output_file.write_text(
+              "\n".join(svg),
+              encoding="utf-8",
+          )
+
+
+          print(
+              f"Generated {output_file} "
+              f"with {len(days)} calendar cells."
+          )
           PY
 
-      - name: 💾 Commit updated calendar (if it changed)
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add profile-3d-contrib/
+      - name: Commit generated calendar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            profile-3d-contrib/profile-signal-flare.svg
 
           if git diff --cached --quiet; then
-            echo "ℹ️  No changes – nothing to commit"
+            echo "No contribution calendar changes."
           else
-            git commit -m "Update 3D contribution calendar (taller cubes, no stars/forks)"
+            git commit \
+              -m "Update 3D contribution calendar"
+
             git push
           fi
