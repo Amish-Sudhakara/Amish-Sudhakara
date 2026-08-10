@@ -12,7 +12,6 @@
     </defs>
     
 <g filter="url(#shadow)">
-<polygon points="112.0,62.0 127.0,70.0 112.0,78.0 97.0,70.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="97.0,70.0 112.0,78.0 97.0,86.0 82.0,78.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="127.0,70.0 142.0,78.0 127.0,86.0 112.0,78.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="82.0,78.0 97.0,86.0 82.0,94.0 67.0,86.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
@@ -462,6 +461,7 @@
 <polygon points="787.0,486.0 802.0,494.0 787.0,502.0 772.0,494.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="817.0,486.0 832.0,494.0 817.0,502.0 802.0,494.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="847.0,486.0 862.0,494.0 847.0,502.0 832.0,494.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="877.0,486.0 892.0,494.0 877.0,502.0 862.0,494.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
 <title>2026-07-18: 3 contributions</title>
 <polygon points="727.0,433.9 742.0,441.9 742.0,510.0 727.0,502.0" fill="#51200C"/>
