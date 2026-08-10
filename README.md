@@ -26,6 +26,15 @@
 
 <img src="./assets/section-divider.svg" width="100%" alt="Section divider" />
 
+<!-- GITHUB PROFILE STATS & LANGUAGES -->
+
+<div align="center">
+  <img src="./assets/github-stats.svg" width="49%" alt="System Activity Stats" />
+  <img src="./assets/top-languages.svg" width="49%" alt="Top Languages" />
+</div>
+
+<img src="./assets/section-divider.svg" width="100%" alt="Section divider" />
+
 <a href="https://www.linkedin.com/in/amishsudhakara/">
   <img src="https://img.shields.io/badge/LINKEDIN-19191D?style=for-the-badge&amp;logo=linkedin&amp;logoColor=F2EBDD&amp;labelColor=FF4F00" alt="LinkedIn" />
 </a>

@@ -15,7 +15,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
       - name: Generate custom 3D contribution dashboard
         env:
@@ -579,16 +584,23 @@ jobs:
           print(f"Repo count: {repo_count}, PR count: {pr_count}")
           PY
 
-      - name: Commit generated calendar
+      - name: Generate profile stat cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: |
+          python scripts/generate_profile_cards.py
+
+      - name: Commit generated profile assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add profile-3d-contrib/profile-signal-flare.svg
+          git add profile-3d-contrib/profile-signal-flare.svg assets/github-stats.svg assets/top-languages.svg
 
           if git diff --cached --quiet; then
-            echo "No contribution calendar changes."
+            echo "No profile asset changes."
           else
-            git commit -m "Update 3D contribution calendar"
-            git push
+            git commit -m "Update profile activity cards and 3D contribution calendar"
+            git push origin HEAD:main
           fi
