@@ -1,10 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="220" viewBox="0 0 560 220" role="img" aria-label="GitHub statistics awaiting first refresh">
-  <style>.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}.sans{font-family:Arial,Helvetica,sans-serif}</style>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="220" viewBox="0 0 560 220" role="img" aria-label="SYSTEM ACTIVITY">
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .sans { font-family: Arial, Helvetica, sans-serif; }
+  </style>
   <rect x="1" y="1" width="558" height="218" fill="#19191D" stroke="#34343A" stroke-width="2"/>
   <rect x="1" y="1" width="8" height="218" fill="#FF4F00"/>
   <rect x="551" y="1" width="8" height="218" fill="#D8FF3E"/>
   <text x="28" y="35" class="mono" fill="#FF4F00" font-size="14" font-weight="800" letter-spacing="2">SYSTEM ACTIVITY</text>
   <line x1="28" y1="49" x2="532" y2="49" stroke="#34343A" stroke-width="2" stroke-dasharray="10 8"/>
-  <text x="28" y="112" class="sans" fill="#F2EBDD" font-size="20" font-weight="700">Waiting for the first workflow run.</text>
-  <text x="28" y="145" class="mono" fill="#929097" font-size="11" letter-spacing="1.2">ACTIONS → UPDATE PROFILE ACTIVITY → RUN WORKFLOW</text>
+  <g transform="translate(28 72)">
+    <rect width="240" height="52" fill="#0D0D0F" stroke="#34343A"/>
+    <text x="15" y="20" class="mono" fill="#929097" font-size="10" letter-spacing="1.5">PUBLIC REPOS</text>
+    <text x="15" y="42" class="sans" fill="#F2EBDD" font-size="20" font-weight="700">12</text>
+    <rect x="224" y="10" width="4" height="32" fill="#FF4F00"/>
+  </g>
+  <g transform="translate(292 72)">
+    <rect width="240" height="52" fill="#0D0D0F" stroke="#34343A"/>
+    <text x="15" y="20" class="mono" fill="#929097" font-size="10" letter-spacing="1.5">FOLLOWERS</text>
+    <text x="15" y="42" class="sans" fill="#F2EBDD" font-size="20" font-weight="700">7</text>
+    <rect x="224" y="10" width="4" height="32" fill="#D8FF3E"/>
+  </g>
+  <g transform="translate(28 142)">
+    <rect width="240" height="52" fill="#0D0D0F" stroke="#34343A"/>
+    <text x="15" y="20" class="mono" fill="#929097" font-size="10" letter-spacing="1.5">TOTAL STARS</text>
+    <text x="15" y="42" class="sans" fill="#F2EBDD" font-size="20" font-weight="700">0</text>
+    <rect x="224" y="10" width="4" height="32" fill="#FF4F00"/>
+  </g>
+  <g transform="translate(292 142)">
+    <rect width="240" height="52" fill="#0D0D0F" stroke="#34343A"/>
+    <text x="15" y="20" class="mono" fill="#929097" font-size="10" letter-spacing="1.5">TOTAL FORKS</text>
+    <text x="15" y="42" class="sans" fill="#F2EBDD" font-size="20" font-weight="700">0</text>
+    <rect x="224" y="10" width="4" height="32" fill="#D8FF3E"/>
+  </g>
 </svg>
