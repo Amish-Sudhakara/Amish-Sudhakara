@@ -13,7 +13,6 @@
     
 <g filter="url(#shadow)">
 <polygon points="127.0,70.0 142.0,78.0 127.0,86.0 112.0,78.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="82.0,78.0 97.0,86.0 82.0,94.0 67.0,86.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="112.0,78.0 127.0,86.0 112.0,94.0 97.0,86.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="142.0,78.0 157.0,86.0 142.0,94.0 127.0,86.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="67.0,86.0 82.0,94.0 67.0,102.0 52.0,94.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
@@ -484,6 +483,7 @@
 </g>
 <polygon points="787.0,502.0 802.0,510.0 787.0,518.0 772.0,510.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="817.0,502.0 832.0,510.0 817.0,518.0 802.0,510.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="847.0,502.0 862.0,510.0 847.0,518.0 832.0,510.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
 <title>2026-08-01: 13 contributions</title>
 <polygon points="757.0,385.9 772.0,393.9 772.0,526.0 757.0,518.0" fill="#819925"/>
