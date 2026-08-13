@@ -15,7 +15,6 @@
 <polygon points="127.0,70.0 142.0,78.0 127.0,86.0 112.0,78.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="112.0,78.0 127.0,86.0 112.0,94.0 97.0,86.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="142.0,78.0 157.0,86.0 142.0,94.0 127.0,86.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="67.0,86.0 82.0,94.0 67.0,102.0 52.0,94.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="97.0,86.0 112.0,94.0 97.0,102.0 82.0,94.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="127.0,86.0 142.0,94.0 127.0,102.0 112.0,94.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="157.0,86.0 172.0,94.0 157.0,102.0 142.0,94.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
@@ -491,6 +490,7 @@
 <polygon points="772.0,377.9 787.0,385.9 772.0,393.9 757.0,385.9" fill="#D8FF3E" stroke="#242833" stroke-width="0.8"/>
 </g>
 <polygon points="802.0,510.0 817.0,518.0 802.0,526.0 787.0,518.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="832.0,510.0 847.0,518.0 832.0,526.0 817.0,518.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="787.0,518.0 802.0,526.0 787.0,534.0 772.0,526.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 </g>
 <g filter="url(#softShadow)">
