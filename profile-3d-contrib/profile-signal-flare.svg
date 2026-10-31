@@ -22,7 +22,6 @@
 <polygon points="112.0,94.0 127.0,102.0 112.0,110.0 97.0,102.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="142.0,94.0 157.0,102.0 142.0,110.0 127.0,102.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="172.0,94.0 187.0,102.0 172.0,110.0 157.0,102.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="37.0,102.0 52.0,110.0 37.0,118.0 22.0,110.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="67.0,102.0 82.0,110.0 67.0,118.0 52.0,110.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="97.0,102.0 112.0,110.0 97.0,118.0 82.0,110.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="127.0,102.0 142.0,110.0 127.0,118.0 112.0,110.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
@@ -502,6 +501,7 @@
 </g>
 <polygon points="787.0,518.0 802.0,526.0 787.0,534.0 772.0,526.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="817.0,518.0 832.0,526.0 817.0,534.0 802.0,526.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="802.0,526.0 817.0,534.0 802.0,542.0 787.0,534.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 </g>
 <g filter="url(#softShadow)">
 <polygon points="975.0,144.0 995.0,158.5 987.3,182.0 962.7,182.0 955.0,158.5" fill="none" stroke="#6E6A72" stroke-width="1" stroke-dasharray="4 4" opacity="0.85"/>
@@ -529,14 +529,14 @@
 <g filter="url(#softShadow)">
 <path d="M 47.00 560.00 A 78.00 78.00 0 1 1 144.92 635.41 L 135.22 598.67 A 40.00 40.00 0 1 0 85.00 560.00 Z" fill="#3776AB"/>
 <path d="M 144.92 635.41 A 78.00 78.00 0 0 1 47.84 571.44 L 85.43 565.87 A 40.00 40.00 0 0 0 135.22 598.67 Z" fill="#F37726"/>
-<path d="M 47.84 571.44 A 78.00 78.00 0 0 1 47.62 569.80 L 85.32 565.03 A 40.00 40.00 0 0 0 85.43 565.87 Z" fill="#E34F26"/>
+<path d="M 47.84 571.44 A 78.00 78.00 0 0 1 47.62 569.80 L 85.32 565.03 A 40.00 40.00 0 0 0 85.43 565.87 Z" fill="#14B8A6"/>
 <path d="M 47.62 569.80 A 78.00 78.00 0 0 1 47.00 560.00 L 85.00 560.00 A 40.00 40.00 0 0 0 85.32 565.03 Z" fill="#4A4A4A"/>
 <circle cx="125" cy="560" r="39" fill="#0D0D0F"/>
 <rect x="265" y="491" width="20" height="20" fill="#3776AB"/>
 <text x="293" y="507" fill="#F2EBDD" font-family="Arial, sans-serif" font-size="22">Python</text>
 <rect x="265" y="533" width="20" height="20" fill="#F37726"/>
 <text x="293" y="549" fill="#F2EBDD" font-family="Arial, sans-serif" font-size="22">Jupyter Notebook</text>
-<rect x="265" y="575" width="20" height="20" fill="#E34F26"/>
+<rect x="265" y="575" width="20" height="20" fill="#14B8A6"/>
 <text x="293" y="591" fill="#F2EBDD" font-family="Arial, sans-serif" font-size="22">JavaScript</text>
 <rect x="265" y="617" width="20" height="20" fill="#4A4A4A"/>
 <text x="293" y="633" fill="#F2EBDD" font-family="Arial, sans-serif" font-size="22">Other</text>
