@@ -12,16 +12,22 @@
     </defs>
     
 <g filter="url(#shadow)">
+<polygon points="112.0,62.0 127.0,70.0 112.0,78.0 97.0,70.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="97.0,70.0 112.0,78.0 97.0,86.0 82.0,78.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="127.0,70.0 142.0,78.0 127.0,86.0 112.0,78.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="82.0,78.0 97.0,86.0 82.0,94.0 67.0,86.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="112.0,78.0 127.0,86.0 112.0,94.0 97.0,86.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="142.0,78.0 157.0,86.0 142.0,94.0 127.0,86.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="67.0,86.0 82.0,94.0 67.0,102.0 52.0,94.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="97.0,86.0 112.0,94.0 97.0,102.0 82.0,94.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="127.0,86.0 142.0,94.0 127.0,102.0 112.0,94.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="157.0,86.0 172.0,94.0 157.0,102.0 142.0,94.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="52.0,94.0 67.0,102.0 52.0,110.0 37.0,102.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="82.0,94.0 97.0,102.0 82.0,110.0 67.0,102.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="112.0,94.0 127.0,102.0 112.0,110.0 97.0,102.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="142.0,94.0 157.0,102.0 142.0,110.0 127.0,102.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="172.0,94.0 187.0,102.0 172.0,110.0 157.0,102.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="37.0,102.0 52.0,110.0 37.0,118.0 22.0,110.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="67.0,102.0 82.0,110.0 67.0,118.0 52.0,110.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="97.0,102.0 112.0,110.0 97.0,118.0 82.0,110.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="127.0,102.0 142.0,110.0 127.0,118.0 112.0,110.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
@@ -112,37 +118,37 @@
 <polygon points="337.0,198.0 352.0,206.0 337.0,214.0 322.0,206.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="367.0,198.0 382.0,206.0 367.0,214.0 352.0,206.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="202.0,206.0 217.0,214.0 202.0,222.0 187.0,214.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="232.0,206.0 247.0,214.0 232.0,222.0 217.0,214.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<g>
+<title>2026-02-13: 6 contributions</title>
+<polygon points="217.0,118.7 232.0,126.7 232.0,222.0 217.0,214.0" fill="#982F00"/>
+<polygon points="247.0,118.7 232.0,126.7 232.0,222.0 247.0,214.0" fill="#C23C00"/>
+<polygon points="232.0,110.7 247.0,118.7 232.0,126.7 217.0,118.7" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
+</g>
 <polygon points="262.0,206.0 277.0,214.0 262.0,222.0 247.0,214.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="292.0,206.0 307.0,214.0 292.0,222.0 277.0,214.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="322.0,206.0 337.0,214.0 322.0,222.0 307.0,214.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="352.0,206.0 367.0,214.0 352.0,222.0 337.0,214.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="382.0,206.0 397.0,214.0 382.0,222.0 367.0,214.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="217.0,214.0 232.0,222.0 217.0,230.0 202.0,222.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<g>
-<title>2026-02-13: 6 contributions</title>
-<polygon points="232.0,126.7 247.0,134.7 247.0,230.0 232.0,222.0" fill="#982F00"/>
-<polygon points="262.0,126.7 247.0,134.7 247.0,230.0 262.0,222.0" fill="#C23C00"/>
-<polygon points="247.0,118.7 262.0,126.7 247.0,134.7 232.0,126.7" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
-</g>
+<polygon points="247.0,214.0 262.0,222.0 247.0,230.0 232.0,222.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="277.0,214.0 292.0,222.0 277.0,230.0 262.0,222.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="307.0,214.0 322.0,222.0 307.0,230.0 292.0,222.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="337.0,214.0 352.0,222.0 337.0,230.0 322.0,222.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="367.0,214.0 382.0,222.0 367.0,230.0 352.0,222.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="397.0,214.0 412.0,222.0 397.0,230.0 382.0,222.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="232.0,222.0 247.0,230.0 232.0,238.0 217.0,230.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<g>
+<title>2026-02-21: 1 contributions</title>
+<polygon points="217.0,191.4 232.0,199.4 232.0,238.0 217.0,230.0" fill="#2D160D"/>
+<polygon points="247.0,191.4 232.0,199.4 232.0,238.0 247.0,230.0" fill="#381B10"/>
+<polygon points="232.0,183.4 247.0,191.4 232.0,199.4 217.0,191.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
+</g>
 <polygon points="262.0,222.0 277.0,230.0 262.0,238.0 247.0,230.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="292.0,222.0 307.0,230.0 292.0,238.0 277.0,230.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="322.0,222.0 337.0,230.0 322.0,238.0 307.0,230.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="352.0,222.0 367.0,230.0 352.0,238.0 337.0,230.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="382.0,222.0 397.0,230.0 382.0,238.0 367.0,230.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="412.0,222.0 427.0,230.0 412.0,238.0 397.0,230.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<g>
-<title>2026-02-21: 1 contributions</title>
-<polygon points="232.0,199.4 247.0,207.4 247.0,246.0 232.0,238.0" fill="#2D160D"/>
-<polygon points="262.0,199.4 247.0,207.4 247.0,246.0 262.0,238.0" fill="#381B10"/>
-<polygon points="247.0,191.4 262.0,199.4 247.0,207.4 232.0,199.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
-</g>
+<polygon points="247.0,230.0 262.0,238.0 247.0,246.0 232.0,238.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="277.0,230.0 292.0,238.0 277.0,246.0 262.0,238.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="307.0,230.0 322.0,238.0 307.0,246.0 292.0,238.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="337.0,230.0 352.0,238.0 337.0,246.0 322.0,238.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
@@ -163,79 +169,79 @@
 <polygon points="397.0,246.0 412.0,254.0 397.0,262.0 382.0,254.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="427.0,246.0 442.0,254.0 427.0,262.0 412.0,254.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="457.0,246.0 472.0,254.0 457.0,262.0 442.0,254.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="292.0,254.0 307.0,262.0 292.0,270.0 277.0,262.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<g>
+<title>2026-03-21: 6 contributions</title>
+<polygon points="277.0,166.7 292.0,174.7 292.0,270.0 277.0,262.0" fill="#982F00"/>
+<polygon points="307.0,166.7 292.0,174.7 292.0,270.0 307.0,262.0" fill="#C23C00"/>
+<polygon points="292.0,158.7 307.0,166.7 292.0,174.7 277.0,166.7" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
+</g>
 <polygon points="322.0,254.0 337.0,262.0 322.0,270.0 307.0,262.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="352.0,254.0 367.0,262.0 352.0,270.0 337.0,262.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="382.0,254.0 397.0,262.0 382.0,270.0 367.0,262.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="412.0,254.0 427.0,262.0 412.0,270.0 397.0,262.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="442.0,254.0 457.0,262.0 442.0,270.0 427.0,262.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="472.0,254.0 487.0,262.0 472.0,270.0 457.0,262.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="307.0,262.0 322.0,270.0 307.0,278.0 292.0,270.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
-<title>2026-03-21: 6 contributions</title>
-<polygon points="292.0,174.7 307.0,182.7 307.0,278.0 292.0,270.0" fill="#982F00"/>
-<polygon points="322.0,174.7 307.0,182.7 307.0,278.0 322.0,270.0" fill="#C23C00"/>
-<polygon points="307.0,166.7 322.0,174.7 307.0,182.7 292.0,174.7" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
+<title>2026-04-03: 6 contributions</title>
+<polygon points="322.0,174.7 337.0,182.7 337.0,278.0 322.0,270.0" fill="#982F00"/>
+<polygon points="352.0,174.7 337.0,182.7 337.0,278.0 352.0,270.0" fill="#C23C00"/>
+<polygon points="337.0,166.7 352.0,174.7 337.0,182.7 322.0,174.7" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
 </g>
-<polygon points="337.0,262.0 352.0,270.0 337.0,278.0 322.0,270.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="367.0,262.0 382.0,270.0 367.0,278.0 352.0,270.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="397.0,262.0 412.0,270.0 397.0,278.0 382.0,270.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="427.0,262.0 442.0,270.0 427.0,278.0 412.0,270.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="457.0,262.0 472.0,270.0 457.0,278.0 442.0,270.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="487.0,262.0 502.0,270.0 487.0,278.0 472.0,270.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="322.0,270.0 337.0,278.0 322.0,286.0 307.0,278.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
-<title>2026-04-03: 6 contributions</title>
-<polygon points="337.0,182.7 352.0,190.7 352.0,286.0 337.0,278.0" fill="#982F00"/>
-<polygon points="367.0,182.7 352.0,190.7 352.0,286.0 367.0,278.0" fill="#C23C00"/>
-<polygon points="352.0,174.7 367.0,182.7 352.0,190.7 337.0,182.7" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
+<title>2026-04-04: 3 contributions</title>
+<polygon points="307.0,209.9 322.0,217.9 322.0,286.0 307.0,278.0" fill="#51200C"/>
+<polygon points="337.0,209.9 322.0,217.9 322.0,286.0 337.0,278.0" fill="#67280F"/>
+<polygon points="322.0,201.9 337.0,209.9 322.0,217.9 307.0,209.9" fill="#873514" stroke="#242833" stroke-width="0.8"/>
 </g>
+<polygon points="352.0,270.0 367.0,278.0 352.0,286.0 337.0,278.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="382.0,270.0 397.0,278.0 382.0,286.0 367.0,278.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="412.0,270.0 427.0,278.0 412.0,286.0 397.0,278.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="442.0,270.0 457.0,278.0 442.0,286.0 427.0,278.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="472.0,270.0 487.0,278.0 472.0,286.0 457.0,278.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="502.0,270.0 517.0,278.0 502.0,286.0 487.0,278.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<g>
-<title>2026-04-04: 3 contributions</title>
-<polygon points="322.0,217.9 337.0,225.9 337.0,294.0 322.0,286.0" fill="#51200C"/>
-<polygon points="352.0,217.9 337.0,225.9 337.0,294.0 352.0,286.0" fill="#67280F"/>
-<polygon points="337.0,209.9 352.0,217.9 337.0,225.9 322.0,217.9" fill="#873514" stroke="#242833" stroke-width="0.8"/>
-</g>
+<polygon points="337.0,278.0 352.0,286.0 337.0,294.0 322.0,286.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="367.0,278.0 382.0,286.0 367.0,294.0 352.0,286.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="397.0,278.0 412.0,286.0 397.0,294.0 382.0,286.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="427.0,278.0 442.0,286.0 427.0,294.0 412.0,286.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="457.0,278.0 472.0,286.0 457.0,294.0 442.0,286.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="487.0,278.0 502.0,286.0 487.0,294.0 472.0,286.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="517.0,278.0 532.0,286.0 517.0,294.0 502.0,286.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<g>
+<title>2026-05-17: 2 contributions</title>
+<polygon points="502.0,230.8 517.0,238.8 517.0,294.0 502.0,286.0" fill="#51200C"/>
+<polygon points="532.0,230.8 517.0,238.8 517.0,294.0 532.0,286.0" fill="#67280F"/>
+<polygon points="517.0,222.8 532.0,230.8 517.0,238.8 502.0,230.8" fill="#873514" stroke="#242833" stroke-width="0.8"/>
+</g>
 <polygon points="352.0,286.0 367.0,294.0 352.0,302.0 337.0,294.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="382.0,286.0 397.0,294.0 382.0,302.0 367.0,294.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="412.0,286.0 427.0,294.0 412.0,302.0 397.0,294.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="442.0,286.0 457.0,294.0 442.0,302.0 427.0,294.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="472.0,286.0 487.0,294.0 472.0,302.0 457.0,294.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="502.0,286.0 517.0,294.0 502.0,302.0 487.0,294.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<g>
-<title>2026-05-17: 2 contributions</title>
-<polygon points="517.0,238.8 532.0,246.8 532.0,302.0 517.0,294.0" fill="#51200C"/>
-<polygon points="547.0,238.8 532.0,246.8 532.0,302.0 547.0,294.0" fill="#67280F"/>
-<polygon points="532.0,230.8 547.0,238.8 532.0,246.8 517.0,238.8" fill="#873514" stroke="#242833" stroke-width="0.8"/>
-</g>
+<polygon points="532.0,286.0 547.0,294.0 532.0,302.0 517.0,294.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="367.0,294.0 382.0,302.0 367.0,310.0 352.0,302.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="397.0,294.0 412.0,302.0 397.0,310.0 382.0,302.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="427.0,294.0 442.0,302.0 427.0,310.0 412.0,302.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="457.0,294.0 472.0,302.0 457.0,310.0 442.0,302.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="487.0,294.0 502.0,302.0 487.0,310.0 472.0,302.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="517.0,294.0 532.0,302.0 517.0,310.0 502.0,302.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<g>
+<title>2026-05-25: 1 contributions</title>
+<polygon points="502.0,263.4 517.0,271.4 517.0,310.0 502.0,302.0" fill="#2D160D"/>
+<polygon points="532.0,263.4 517.0,271.4 517.0,310.0 532.0,302.0" fill="#381B10"/>
+<polygon points="517.0,255.4 532.0,263.4 517.0,271.4 502.0,263.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
+</g>
 <polygon points="547.0,294.0 562.0,302.0 547.0,310.0 532.0,302.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="382.0,302.0 397.0,310.0 382.0,318.0 367.0,310.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="412.0,302.0 427.0,310.0 412.0,318.0 397.0,310.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="442.0,302.0 457.0,310.0 442.0,318.0 427.0,310.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="472.0,302.0 487.0,310.0 472.0,318.0 457.0,310.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="502.0,302.0 517.0,310.0 502.0,318.0 487.0,310.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<g>
-<title>2026-05-25: 1 contributions</title>
-<polygon points="517.0,271.4 532.0,279.4 532.0,318.0 517.0,310.0" fill="#2D160D"/>
-<polygon points="547.0,271.4 532.0,279.4 532.0,318.0 547.0,310.0" fill="#381B10"/>
-<polygon points="532.0,263.4 547.0,271.4 532.0,279.4 517.0,271.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
-</g>
+<polygon points="532.0,302.0 547.0,310.0 532.0,318.0 517.0,310.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="562.0,302.0 577.0,310.0 562.0,318.0 547.0,310.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="397.0,310.0 412.0,318.0 397.0,326.0 382.0,318.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="427.0,310.0 442.0,318.0 427.0,326.0 412.0,318.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
@@ -256,19 +262,19 @@
 <polygon points="487.0,326.0 502.0,334.0 487.0,342.0 472.0,334.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="517.0,326.0 532.0,334.0 517.0,342.0 502.0,334.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="547.0,326.0 562.0,334.0 547.0,342.0 532.0,334.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="577.0,326.0 592.0,334.0 577.0,342.0 562.0,334.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<g>
+<title>2026-06-22: 3 contributions</title>
+<polygon points="562.0,265.9 577.0,273.9 577.0,342.0 562.0,334.0" fill="#51200C"/>
+<polygon points="592.0,265.9 577.0,273.9 577.0,342.0 592.0,334.0" fill="#67280F"/>
+<polygon points="577.0,257.9 592.0,265.9 577.0,273.9 562.0,265.9" fill="#873514" stroke="#242833" stroke-width="0.8"/>
+</g>
 <polygon points="607.0,326.0 622.0,334.0 607.0,342.0 592.0,334.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="442.0,334.0 457.0,342.0 442.0,350.0 427.0,342.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="472.0,334.0 487.0,342.0 472.0,350.0 457.0,342.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="502.0,334.0 517.0,342.0 502.0,350.0 487.0,342.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="532.0,334.0 547.0,342.0 532.0,350.0 517.0,342.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="562.0,334.0 577.0,342.0 562.0,350.0 547.0,342.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<g>
-<title>2026-06-22: 3 contributions</title>
-<polygon points="577.0,273.9 592.0,281.9 592.0,350.0 577.0,342.0" fill="#51200C"/>
-<polygon points="607.0,273.9 592.0,281.9 592.0,350.0 607.0,342.0" fill="#67280F"/>
-<polygon points="592.0,265.9 607.0,273.9 592.0,281.9 577.0,273.9" fill="#873514" stroke="#242833" stroke-width="0.8"/>
-</g>
+<polygon points="592.0,334.0 607.0,342.0 592.0,350.0 577.0,342.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="622.0,334.0 637.0,342.0 622.0,350.0 607.0,342.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="457.0,342.0 472.0,350.0 457.0,358.0 442.0,350.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="487.0,342.0 502.0,350.0 487.0,358.0 472.0,350.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
@@ -280,105 +286,110 @@
 <polygon points="472.0,350.0 487.0,358.0 472.0,366.0 457.0,358.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="502.0,350.0 517.0,358.0 502.0,366.0 487.0,358.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="532.0,350.0 547.0,358.0 532.0,366.0 517.0,358.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="562.0,350.0 577.0,358.0 562.0,366.0 547.0,358.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="592.0,350.0 607.0,358.0 592.0,366.0 577.0,358.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="622.0,350.0 637.0,358.0 622.0,366.0 607.0,358.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="652.0,350.0 667.0,358.0 652.0,366.0 637.0,358.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="487.0,358.0 502.0,366.0 487.0,374.0 472.0,366.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="517.0,358.0 532.0,366.0 517.0,374.0 502.0,366.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="547.0,358.0 562.0,366.0 547.0,374.0 532.0,366.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
 <title>2026-07-01: 2 contributions</title>
-<polygon points="562.0,310.8 577.0,318.8 577.0,374.0 562.0,366.0" fill="#51200C"/>
-<polygon points="592.0,310.8 577.0,318.8 577.0,374.0 592.0,366.0" fill="#67280F"/>
-<polygon points="577.0,302.8 592.0,310.8 577.0,318.8 562.0,310.8" fill="#873514" stroke="#242833" stroke-width="0.8"/>
+<polygon points="547.0,302.8 562.0,310.8 562.0,366.0 547.0,358.0" fill="#51200C"/>
+<polygon points="577.0,302.8 562.0,310.8 562.0,366.0 577.0,358.0" fill="#67280F"/>
+<polygon points="562.0,294.8 577.0,302.8 562.0,310.8 547.0,302.8" fill="#873514" stroke="#242833" stroke-width="0.8"/>
 </g>
-<polygon points="607.0,358.0 622.0,366.0 607.0,374.0 592.0,366.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="637.0,358.0 652.0,366.0 637.0,374.0 622.0,366.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="592.0,350.0 607.0,358.0 592.0,366.0 577.0,358.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="622.0,350.0 637.0,358.0 622.0,366.0 607.0,358.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
 <title>2026-07-19: 1 contributions</title>
-<polygon points="652.0,327.4 667.0,335.4 667.0,374.0 652.0,366.0" fill="#2D160D"/>
-<polygon points="682.0,327.4 667.0,335.4 667.0,374.0 682.0,366.0" fill="#381B10"/>
-<polygon points="667.0,319.4 682.0,327.4 667.0,335.4 652.0,327.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
+<polygon points="637.0,319.4 652.0,327.4 652.0,366.0 637.0,358.0" fill="#2D160D"/>
+<polygon points="667.0,319.4 652.0,327.4 652.0,366.0 667.0,358.0" fill="#381B10"/>
+<polygon points="652.0,311.4 667.0,319.4 652.0,327.4 637.0,319.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
 </g>
-<polygon points="502.0,366.0 517.0,374.0 502.0,382.0 487.0,374.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="532.0,366.0 547.0,374.0 532.0,382.0 517.0,374.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="487.0,358.0 502.0,366.0 487.0,374.0 472.0,366.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="517.0,358.0 532.0,366.0 517.0,374.0 502.0,366.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
 <title>2026-07-02: 2 contributions</title>
-<polygon points="547.0,318.8 562.0,326.8 562.0,382.0 547.0,374.0" fill="#51200C"/>
-<polygon points="577.0,318.8 562.0,326.8 562.0,382.0 577.0,374.0" fill="#67280F"/>
-<polygon points="562.0,310.8 577.0,318.8 562.0,326.8 547.0,318.8" fill="#873514" stroke="#242833" stroke-width="0.8"/>
+<polygon points="532.0,310.8 547.0,318.8 547.0,374.0 532.0,366.0" fill="#51200C"/>
+<polygon points="562.0,310.8 547.0,318.8 547.0,374.0 562.0,366.0" fill="#67280F"/>
+<polygon points="547.0,302.8 562.0,310.8 547.0,318.8 532.0,310.8" fill="#873514" stroke="#242833" stroke-width="0.8"/>
 </g>
+<polygon points="577.0,358.0 592.0,366.0 577.0,374.0 562.0,366.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="607.0,358.0 622.0,366.0 607.0,374.0 592.0,366.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="637.0,358.0 652.0,366.0 637.0,374.0 622.0,366.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="667.0,358.0 682.0,366.0 667.0,374.0 652.0,366.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="502.0,366.0 517.0,374.0 502.0,382.0 487.0,374.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="532.0,366.0 547.0,374.0 532.0,382.0 517.0,374.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="562.0,366.0 577.0,374.0 562.0,382.0 547.0,374.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="592.0,366.0 607.0,374.0 592.0,382.0 577.0,374.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="622.0,366.0 637.0,374.0 622.0,382.0 607.0,374.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="652.0,366.0 667.0,374.0 652.0,382.0 637.0,374.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="682.0,366.0 697.0,374.0 682.0,382.0 667.0,374.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="517.0,374.0 532.0,382.0 517.0,390.0 502.0,382.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="547.0,374.0 562.0,382.0 547.0,390.0 532.0,382.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="577.0,374.0 592.0,382.0 577.0,390.0 562.0,382.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="607.0,374.0 622.0,382.0 607.0,390.0 592.0,382.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
 <title>2026-07-21: 2 contributions</title>
-<polygon points="622.0,326.8 637.0,334.8 637.0,390.0 622.0,382.0" fill="#51200C"/>
-<polygon points="652.0,326.8 637.0,334.8 637.0,390.0 652.0,382.0" fill="#67280F"/>
-<polygon points="637.0,318.8 652.0,326.8 637.0,334.8 622.0,326.8" fill="#873514" stroke="#242833" stroke-width="0.8"/>
+<polygon points="607.0,318.8 622.0,326.8 622.0,382.0 607.0,374.0" fill="#51200C"/>
+<polygon points="637.0,318.8 622.0,326.8 622.0,382.0 637.0,374.0" fill="#67280F"/>
+<polygon points="622.0,310.8 637.0,318.8 622.0,326.8 607.0,318.8" fill="#873514" stroke="#242833" stroke-width="0.8"/>
 </g>
 <g>
 <title>2026-07-27: 3 contributions</title>
-<polygon points="652.0,313.9 667.0,321.9 667.0,390.0 652.0,382.0" fill="#51200C"/>
-<polygon points="682.0,313.9 667.0,321.9 667.0,390.0 682.0,382.0" fill="#67280F"/>
-<polygon points="667.0,305.9 682.0,313.9 667.0,321.9 652.0,313.9" fill="#873514" stroke="#242833" stroke-width="0.8"/>
+<polygon points="637.0,305.9 652.0,313.9 652.0,382.0 637.0,374.0" fill="#51200C"/>
+<polygon points="667.0,305.9 652.0,313.9 652.0,382.0 667.0,374.0" fill="#67280F"/>
+<polygon points="652.0,297.9 667.0,305.9 652.0,313.9 637.0,305.9" fill="#873514" stroke="#242833" stroke-width="0.8"/>
 </g>
-<polygon points="697.0,374.0 712.0,382.0 697.0,390.0 682.0,382.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="532.0,382.0 547.0,390.0 532.0,398.0 517.0,390.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="682.0,366.0 697.0,374.0 682.0,382.0 667.0,374.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="517.0,374.0 532.0,382.0 517.0,390.0 502.0,382.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
 <title>2026-07-10: 1 contributions</title>
-<polygon points="547.0,351.4 562.0,359.4 562.0,398.0 547.0,390.0" fill="#2D160D"/>
-<polygon points="577.0,351.4 562.0,359.4 562.0,398.0 577.0,390.0" fill="#381B10"/>
-<polygon points="562.0,343.4 577.0,351.4 562.0,359.4 547.0,351.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
+<polygon points="532.0,343.4 547.0,351.4 547.0,390.0 532.0,382.0" fill="#2D160D"/>
+<polygon points="562.0,343.4 547.0,351.4 547.0,390.0 562.0,382.0" fill="#381B10"/>
+<polygon points="547.0,335.4 562.0,343.4 547.0,351.4 532.0,343.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
 </g>
 <g>
 <title>2026-07-16: 4 contributions</title>
-<polygon points="577.0,311.4 592.0,319.4 592.0,398.0 577.0,390.0" fill="#982F00"/>
-<polygon points="607.0,311.4 592.0,319.4 592.0,398.0 607.0,390.0" fill="#C23C00"/>
-<polygon points="592.0,303.4 607.0,311.4 592.0,319.4 577.0,311.4" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
+<polygon points="562.0,303.4 577.0,311.4 577.0,390.0 562.0,382.0" fill="#982F00"/>
+<polygon points="592.0,303.4 577.0,311.4 577.0,390.0 592.0,382.0" fill="#C23C00"/>
+<polygon points="577.0,295.4 592.0,303.4 577.0,311.4 562.0,303.4" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
 </g>
 <g>
 <title>2026-07-22: 6 contributions</title>
-<polygon points="607.0,294.7 622.0,302.7 622.0,398.0 607.0,390.0" fill="#982F00"/>
-<polygon points="637.0,294.7 622.0,302.7 622.0,398.0 637.0,390.0" fill="#C23C00"/>
-<polygon points="622.0,286.7 637.0,294.7 622.0,302.7 607.0,294.7" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
+<polygon points="592.0,286.7 607.0,294.7 607.0,390.0 592.0,382.0" fill="#982F00"/>
+<polygon points="622.0,286.7 607.0,294.7 607.0,390.0 622.0,382.0" fill="#C23C00"/>
+<polygon points="607.0,278.7 622.0,286.7 607.0,294.7 592.0,286.7" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
 </g>
 <g>
 <title>2026-07-28: 1 contributions</title>
-<polygon points="637.0,351.4 652.0,359.4 652.0,398.0 637.0,390.0" fill="#2D160D"/>
-<polygon points="667.0,351.4 652.0,359.4 652.0,398.0 667.0,390.0" fill="#381B10"/>
-<polygon points="652.0,343.4 667.0,351.4 652.0,359.4 637.0,351.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
+<polygon points="622.0,343.4 637.0,351.4 637.0,390.0 622.0,382.0" fill="#2D160D"/>
+<polygon points="652.0,343.4 637.0,351.4 637.0,390.0 652.0,382.0" fill="#381B10"/>
+<polygon points="637.0,335.4 652.0,343.4 637.0,351.4 622.0,343.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
 </g>
-<polygon points="682.0,382.0 697.0,390.0 682.0,398.0 667.0,390.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="712.0,382.0 727.0,390.0 712.0,398.0 697.0,390.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="547.0,390.0 562.0,398.0 547.0,406.0 532.0,398.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="667.0,374.0 682.0,382.0 667.0,390.0 652.0,382.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="697.0,374.0 712.0,382.0 697.0,390.0 682.0,382.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="532.0,382.0 547.0,390.0 532.0,398.0 517.0,390.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
 <title>2026-07-17: 4 contributions</title>
-<polygon points="562.0,319.4 577.0,327.4 577.0,406.0 562.0,398.0" fill="#982F00"/>
-<polygon points="592.0,319.4 577.0,327.4 577.0,406.0 592.0,398.0" fill="#C23C00"/>
-<polygon points="577.0,311.4 592.0,319.4 577.0,327.4 562.0,319.4" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
+<polygon points="547.0,311.4 562.0,319.4 562.0,398.0 547.0,390.0" fill="#982F00"/>
+<polygon points="577.0,311.4 562.0,319.4 562.0,398.0 577.0,390.0" fill="#C23C00"/>
+<polygon points="562.0,303.4 577.0,311.4 562.0,319.4 547.0,311.4" fill="#FF4F00" stroke="#242833" stroke-width="0.8"/>
 </g>
+<polygon points="592.0,382.0 607.0,390.0 592.0,398.0 577.0,390.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="622.0,382.0 637.0,390.0 622.0,398.0 607.0,390.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="652.0,382.0 667.0,390.0 652.0,398.0 637.0,390.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<g>
+<title>2026-08-10: 1 contributions</title>
+<polygon points="667.0,351.4 682.0,359.4 682.0,398.0 667.0,390.0" fill="#2D160D"/>
+<polygon points="697.0,351.4 682.0,359.4 682.0,398.0 697.0,390.0" fill="#381B10"/>
+<polygon points="682.0,343.4 697.0,351.4 682.0,359.4 667.0,351.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
+</g>
+<polygon points="712.0,382.0 727.0,390.0 712.0,398.0 697.0,390.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<g>
+<title>2026-07-18: 3 contributions</title>
+<polygon points="532.0,329.9 547.0,337.9 547.0,406.0 532.0,398.0" fill="#51200C"/>
+<polygon points="562.0,329.9 547.0,337.9 547.0,406.0 562.0,398.0" fill="#67280F"/>
+<polygon points="547.0,321.9 562.0,329.9 547.0,337.9 532.0,329.9" fill="#873514" stroke="#242833" stroke-width="0.8"/>
+</g>
+<polygon points="577.0,390.0 592.0,398.0 577.0,406.0 562.0,398.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="607.0,390.0 622.0,398.0 607.0,406.0 592.0,398.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="637.0,390.0 652.0,398.0 637.0,406.0 622.0,398.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="667.0,390.0 682.0,398.0 667.0,406.0 652.0,398.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<g>
-<title>2026-08-10: 1 contributions</title>
-<polygon points="682.0,359.4 697.0,367.4 697.0,406.0 682.0,398.0" fill="#2D160D"/>
-<polygon points="712.0,359.4 697.0,367.4 697.0,406.0 712.0,398.0" fill="#381B10"/>
-<polygon points="697.0,351.4 712.0,359.4 697.0,367.4 682.0,359.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
-</g>
+<polygon points="697.0,390.0 712.0,398.0 697.0,406.0 682.0,398.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="727.0,390.0 742.0,398.0 727.0,406.0 712.0,398.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
-<title>2026-07-18: 3 contributions</title>
-<polygon points="547.0,337.9 562.0,345.9 562.0,414.0 547.0,406.0" fill="#51200C"/>
-<polygon points="577.0,337.9 562.0,345.9 562.0,414.0 577.0,406.0" fill="#67280F"/>
-<polygon points="562.0,329.9 577.0,337.9 562.0,345.9 547.0,337.9" fill="#873514" stroke="#242833" stroke-width="0.8"/>
+<title>2026-07-25: 16 contributions</title>
+<polygon points="547.0,263.0 562.0,271.0 562.0,414.0 547.0,406.0" fill="#819925"/>
+<polygon points="577.0,263.0 562.0,271.0 562.0,414.0 577.0,406.0" fill="#A4C22F"/>
+<polygon points="562.0,255.0 577.0,263.0 562.0,271.0 547.0,263.0" fill="#D8FF3E" stroke="#242833" stroke-width="0.8"/>
 </g>
 <polygon points="592.0,398.0 607.0,406.0 592.0,414.0 577.0,406.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="622.0,398.0 637.0,406.0 622.0,414.0 607.0,406.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
@@ -387,10 +398,10 @@
 <polygon points="712.0,398.0 727.0,406.0 712.0,414.0 697.0,406.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="742.0,398.0 757.0,406.0 742.0,414.0 727.0,406.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
-<title>2026-07-25: 16 contributions</title>
-<polygon points="562.0,271.0 577.0,279.0 577.0,422.0 562.0,414.0" fill="#819925"/>
-<polygon points="592.0,271.0 577.0,279.0 577.0,422.0 592.0,414.0" fill="#A4C22F"/>
-<polygon points="577.0,263.0 592.0,271.0 577.0,279.0 562.0,271.0" fill="#D8FF3E" stroke="#242833" stroke-width="0.8"/>
+<title>2026-08-01: 13 contributions</title>
+<polygon points="562.0,281.9 577.0,289.9 577.0,422.0 562.0,414.0" fill="#819925"/>
+<polygon points="592.0,281.9 577.0,289.9 577.0,422.0 592.0,414.0" fill="#A4C22F"/>
+<polygon points="577.0,273.9 592.0,281.9 577.0,289.9 562.0,281.9" fill="#D8FF3E" stroke="#242833" stroke-width="0.8"/>
 </g>
 <polygon points="607.0,406.0 622.0,414.0 607.0,422.0 592.0,414.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="637.0,406.0 652.0,414.0 637.0,422.0 622.0,414.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
@@ -398,12 +409,7 @@
 <polygon points="697.0,406.0 712.0,414.0 697.0,422.0 682.0,414.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="727.0,406.0 742.0,414.0 727.0,422.0 712.0,414.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="757.0,406.0 772.0,414.0 757.0,422.0 742.0,414.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<g>
-<title>2026-08-01: 13 contributions</title>
-<polygon points="577.0,289.9 592.0,297.9 592.0,430.0 577.0,422.0" fill="#819925"/>
-<polygon points="607.0,289.9 592.0,297.9 592.0,430.0 607.0,422.0" fill="#A4C22F"/>
-<polygon points="592.0,281.9 607.0,289.9 592.0,297.9 577.0,289.9" fill="#D8FF3E" stroke="#242833" stroke-width="0.8"/>
-</g>
+<polygon points="592.0,414.0 607.0,422.0 592.0,430.0 577.0,422.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="622.0,414.0 637.0,422.0 622.0,430.0 607.0,422.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="652.0,414.0 667.0,422.0 652.0,430.0 637.0,422.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="682.0,414.0 697.0,422.0 682.0,430.0 667.0,422.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
@@ -463,45 +469,39 @@
 <polygon points="742.0,478.0 757.0,486.0 742.0,494.0 727.0,486.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="772.0,478.0 787.0,486.0 772.0,494.0 757.0,486.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="802.0,478.0 817.0,486.0 802.0,494.0 787.0,486.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="832.0,478.0 847.0,486.0 832.0,494.0 817.0,486.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<g>
+<title>2026-10-27: 2 contributions</title>
+<polygon points="817.0,430.8 832.0,438.8 832.0,494.0 817.0,486.0" fill="#51200C"/>
+<polygon points="847.0,430.8 832.0,438.8 832.0,494.0 847.0,486.0" fill="#67280F"/>
+<polygon points="832.0,422.8 847.0,430.8 832.0,438.8 817.0,430.8" fill="#873514" stroke="#242833" stroke-width="0.8"/>
+</g>
 <polygon points="862.0,478.0 877.0,486.0 862.0,494.0 847.0,486.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="892.0,478.0 907.0,486.0 892.0,494.0 877.0,486.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="727.0,486.0 742.0,494.0 727.0,502.0 712.0,494.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="757.0,486.0 772.0,494.0 757.0,502.0 742.0,494.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="787.0,486.0 802.0,494.0 787.0,502.0 772.0,494.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="817.0,486.0 832.0,494.0 817.0,502.0 802.0,494.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<g>
-<title>2026-10-27: 2 contributions</title>
-<polygon points="832.0,438.8 847.0,446.8 847.0,502.0 832.0,494.0" fill="#51200C"/>
-<polygon points="862.0,438.8 847.0,446.8 847.0,502.0 862.0,494.0" fill="#67280F"/>
-<polygon points="847.0,430.8 862.0,438.8 847.0,446.8 832.0,438.8" fill="#873514" stroke="#242833" stroke-width="0.8"/>
-</g>
-<polygon points="877.0,486.0 892.0,494.0 877.0,502.0 862.0,494.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="742.0,494.0 757.0,502.0 742.0,510.0 727.0,502.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="772.0,494.0 787.0,502.0 772.0,510.0 757.0,502.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="802.0,494.0 817.0,502.0 802.0,510.0 787.0,502.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
 <title>2026-10-28: 14 contributions</title>
-<polygon points="817.0,366.0 832.0,374.0 832.0,510.0 817.0,502.0" fill="#819925"/>
-<polygon points="847.0,366.0 832.0,374.0 832.0,510.0 847.0,502.0" fill="#A4C22F"/>
-<polygon points="832.0,358.0 847.0,366.0 832.0,374.0 817.0,366.0" fill="#D8FF3E" stroke="#242833" stroke-width="0.8"/>
+<polygon points="802.0,358.0 817.0,366.0 817.0,502.0 802.0,494.0" fill="#819925"/>
+<polygon points="832.0,358.0 817.0,366.0 817.0,502.0 832.0,494.0" fill="#A4C22F"/>
+<polygon points="817.0,350.0 832.0,358.0 817.0,366.0 802.0,358.0" fill="#D8FF3E" stroke="#242833" stroke-width="0.8"/>
 </g>
-<polygon points="862.0,494.0 877.0,502.0 862.0,510.0 847.0,502.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="757.0,502.0 772.0,510.0 757.0,518.0 742.0,510.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="787.0,502.0 802.0,510.0 787.0,518.0 772.0,510.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="847.0,486.0 862.0,494.0 847.0,502.0 832.0,494.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="742.0,494.0 757.0,502.0 742.0,510.0 727.0,502.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="772.0,494.0 787.0,502.0 772.0,510.0 757.0,502.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <g>
 <title>2026-10-29: 1 contributions</title>
-<polygon points="802.0,471.4 817.0,479.4 817.0,518.0 802.0,510.0" fill="#2D160D"/>
-<polygon points="832.0,471.4 817.0,479.4 817.0,518.0 832.0,510.0" fill="#381B10"/>
-<polygon points="817.0,463.4 832.0,471.4 817.0,479.4 802.0,471.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
+<polygon points="787.0,463.4 802.0,471.4 802.0,510.0 787.0,502.0" fill="#2D160D"/>
+<polygon points="817.0,463.4 802.0,471.4 802.0,510.0 817.0,502.0" fill="#381B10"/>
+<polygon points="802.0,455.4 817.0,463.4 802.0,471.4 787.0,463.4" fill="#4A2415" stroke="#242833" stroke-width="0.8"/>
 </g>
-<polygon points="847.0,502.0 862.0,510.0 847.0,518.0 832.0,510.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="832.0,494.0 847.0,502.0 832.0,510.0 817.0,502.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="757.0,502.0 772.0,510.0 757.0,518.0 742.0,510.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="787.0,502.0 802.0,510.0 787.0,518.0 772.0,510.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
+<polygon points="817.0,502.0 832.0,510.0 817.0,518.0 802.0,510.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="772.0,510.0 787.0,518.0 772.0,526.0 757.0,518.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="802.0,510.0 817.0,518.0 802.0,526.0 787.0,518.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="832.0,510.0 847.0,518.0 832.0,526.0 817.0,518.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 <polygon points="787.0,518.0 802.0,526.0 787.0,534.0 772.0,526.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="817.0,518.0 832.0,526.0 817.0,534.0 802.0,526.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
-<polygon points="802.0,526.0 817.0,534.0 802.0,542.0 787.0,534.0" fill="#18191E" stroke="#242833" stroke-width="0.8" opacity="0.98"/>
 </g>
 <g filter="url(#softShadow)">
 <polygon points="975.0,144.0 995.0,158.5 987.3,182.0 962.7,182.0 955.0,158.5" fill="none" stroke="#6E6A72" stroke-width="1" stroke-dasharray="4 4" opacity="0.85"/>
@@ -529,14 +529,14 @@
 <g filter="url(#softShadow)">
 <path d="M 47.00 560.00 A 78.00 78.00 0 1 1 144.91 635.42 L 135.21 598.67 A 40.00 40.00 0 1 0 85.00 560.00 Z" fill="#3776AB"/>
 <path d="M 144.91 635.42 A 78.00 78.00 0 0 1 47.84 571.44 L 85.43 565.87 A 40.00 40.00 0 0 0 135.21 598.67 Z" fill="#F37726"/>
-<path d="M 47.84 571.44 A 78.00 78.00 0 0 1 47.62 569.80 L 85.32 565.03 A 40.00 40.00 0 0 0 85.43 565.87 Z" fill="#14B8A6"/>
+<path d="M 47.84 571.44 A 78.00 78.00 0 0 1 47.62 569.80 L 85.32 565.03 A 40.00 40.00 0 0 0 85.43 565.87 Z" fill="#3776AB"/>
 <path d="M 47.62 569.80 A 78.00 78.00 0 0 1 47.00 560.00 L 85.00 560.00 A 40.00 40.00 0 0 0 85.32 565.03 Z" fill="#4A4A4A"/>
 <circle cx="125" cy="560" r="39" fill="#0D0D0F"/>
 <rect x="265" y="491" width="20" height="20" fill="#3776AB"/>
 <text x="293" y="507" fill="#F2EBDD" font-family="Arial, sans-serif" font-size="22">Python</text>
 <rect x="265" y="533" width="20" height="20" fill="#F37726"/>
 <text x="293" y="549" fill="#F2EBDD" font-family="Arial, sans-serif" font-size="22">Jupyter Notebook</text>
-<rect x="265" y="575" width="20" height="20" fill="#14B8A6"/>
+<rect x="265" y="575" width="20" height="20" fill="#3776AB"/>
 <text x="293" y="591" fill="#F2EBDD" font-family="Arial, sans-serif" font-size="22">JavaScript</text>
 <rect x="265" y="617" width="20" height="20" fill="#4A4A4A"/>
 <text x="293" y="633" fill="#F2EBDD" font-family="Arial, sans-serif" font-size="22">Other</text>
